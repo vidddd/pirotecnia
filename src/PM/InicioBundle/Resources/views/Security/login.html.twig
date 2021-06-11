@@ -1,0 +1,38 @@
+{% extends 'PMInicioBundle::base.html.twig' %}
+{% block classbody "login" %}
+   {% block body %}
+		
+		<!-- Main page container -->
+		<section class="container" role="main">
+		{% if error %}
+		<div class="response-msg error ui-corner-all">
+			<span>Error Entrando</span>
+			{# error.message #}Datos de Acceso incorrectos
+		</div>
+		{% endif %}
+			<div class="login-logo">
+				<h4>Bienvenido a Pirotecnia Manchega</h4>
+			</div>
+
+			<form action="{{ path('login_check') }}" method="post" enctype="multipart/form-data" class="forms" name="form-login" >
+				<div class="control-group">
+					<div class="form-controls">
+						<div class="input-prepend">
+							<span class="add-on"><span class="icon-user"></span></span><input id="icon" type="text" placeholder="Usuario" name="_username" value="{{ last_username }}">
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="form-controls">
+						<div class="input-prepend">
+							<span class="add-on"><span class="icon-key"></span></span><input id="password" type="password" placeholder="Contrase&ntilde;a" name="_password" >
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-alt btn-primary btn-large btn-block" type="submit">ENTRAR</button>
+				<a class="login-link" href="http://www.pirotecniamanchega.com">www.pirotecniamanchega.com</a>
+			</form>
+			
+		</section>
+		<!-- /Main page container -->
+	{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+					<article class="span12 data-block turquoise">
+						<header>
+							<h2>Informes Diarios</h2>
+						</header>
+						<section>
+						<div class="span10">
+						<div class="row">	<form class="form-horizontal no-margin" action="{{ path('informe_diario') }}" method="POST" {{ form_enctype(filterForm) }}>
+						<span class="span5">
+							<div id="horizontal">
+									<div class="control-group">
+											{{ form_label(filterForm.fecha, '', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.fecha, { 'attr': {'class': 'span2 datepicker2'}}) }}</div>
+										</div>
+							</div>
+							</span>
+							<span class="span5">
+
+								<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+										{{ form_label(filterForm.producto, 'Tipo Producto', { 'label_attr': {'class': 'control-label'}}) }}
+										<div class="controls">{{ form_widget(filterForm.producto, { 'attr': {'class': 'span2'}}) }}</div>
+										</div>
+								</div>
+
+							</span>
+							<span class="span5">
+
+								<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+										{{ form_label(filterForm.clase, 'Division de Riesgo', { 'label_attr': {'class': 'control-label'}}) }}
+										<div class="controls">{{ form_widget(filterForm.clase, { 'attr': {'class': 'span2'}}) }}</div>
+										</div>
+							  </div>
+
+							</span>
+							</span>
+						</div>
+						<div class="row">
+										<div style="float:right;" class="form-actions form-left">
+										<button class="btn btn-alt btn-turquesa" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+											<button class="btn btn-alt btn-turquesa" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+									</div>
+							</div></div>
+
+							  {% if form_errors(filterForm) %}
+								<div class="span2"></div><div class="span10"> <div class="row"><div class="alert alert-gray fade in">
+							        <button class="close" data-dismiss="alert">×</button>
+													{{  form_errors(filterForm) }}
+						     </div></div></div>
+							 {% endif %}
+
+			 				{{ form_widget(filterForm._token) }}</form>
+							{% if entities %}
+								<div class="pagination-right"><a href="{{ path('informe_diario_print') }}" target="_blank" name="imprimirdiario" class="btn btn-alt btn-primary"><span class="awe-print"></span>Imprimir Libro Diario</a></div>
+
+							<table class="table table-striped table-bordered table-condensed table-hover no-margin">
+							<thead>
+								<tr>
+													<th>Id</th>
+													<th width="70">Fecha</th>
+													<th width="40">Clase</th>
+													<th width="80">Tipo Producto</th>
+													<th width="50">Carta Porte</th>
+													<th width="350">Procedencia o Destino</th>
+													<th>Entrada(kg)</th>
+													<th>Salida(kg)</th>
+													<!-- <th>Existencias(kg)</th> -->
+											</tr>
+									</thead>
+									<tbody>
+										{% for entity in entities %}
+												<tr>
+														 <td><a href="#clienteModal{{ entity.id }}" data-toggle="modal">{{ entity.id }}</a></td>
+														 <td>{{ entity.fecha|date('d.m.Y') }}</td>
+														 <td>{{ entity.claseText }}</td>
+														 <td>{{ entity.productoText }}</td>
+														 <td>{{ entity.cartaporte }}</td>
+														 <td>{{ entity.procedenciad|length > 150 ? entity.procedenciad|slice(0, 150) ~ '...' : entity.procedenciad }}</td>
+														 <td style="text-align:right;">{{ entity.entrada|number_format(3, '.', ',') }}</td>
+														 <td style="text-align:right;">{{ entity.salida|number_format(3, '.', ',') }}</td>
+														 {% set ext = '0' %}
+														 {% if filterData.producto == '1' %}
+														 		{% set ext = entity.existencias %}
+																	{% if filterData.clase == '5' %}
+																		 {% set ext = entity.existencias11g %}
+																	{% endif %}
+																	{% if filterData.clase == '7' %}
+																		 {% set ext = entity.existencias13g %}
+																	{% endif %}
+																	{% if filterData.clase == '8' %}
+																		 {% set ext = entity.existencias14g %}
+																	{% endif %}
+																	{% if filterData.clase == '9' %}
+																		 {% set ext = entity.existencias14s %}
+																	{% endif %}
+													 	 {% endif %}
+														 {% if filterData.producto == '2' %}
+														 		{% set ext = entity.existencias2 %}
+													 	 {% endif %}
+														 <!-- <td style="text-align:right;"><strong>{{ ext|number_format(3, '.', ',') }}</strong></td>
+														 	-->
+												</tr>
+										{% endfor %}
+							 </tbody>
+								</tbody>
+							</table>
+							<div class="pagination pagination-left">{{ pagerHtml|raw }}</div>
+							<div class="pagination-right"><a href="{{ path('informe_diario_print') }}" target="_blank" name="imprimirdiario" class="btn btn-alt btn-primary"><span class="awe-print"></span>Imprimir Libro Diario</a></div>
+						{% endif %}
+						</section>
+					</article>
+				</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block content %}
+		<section role="main" class="container">
+				<div class="row">
+					<article class="span12 blue data-block">
+						<header><h2><span class="icon-fire"></span>Pirotecnia Manchega</h2></header>
+					</article>
+				</div>
+				<div class="row">
+					<article class="span4 red data-block">
+						<header><h2></h2></header>
+						<section>
+						</section>
+					</article>
+					<article class="span4 data-block">
+						<header><h2></h2></header>
+						<section>
+						</section>
+					</article>
+					<article class="span4 dark data-block">
+						<header><h2>Copia de Seguridad</h2></header>
+						<section>
+							<form action="{{ path('pm_inicio_homepage') }}" method="post" {{ form_enctype(form) }}>
+								<fieldset>
+									<div class="control-group">
+										<label class="control-label" for="input">Nombre</label>
+										<div class="controls">
+												{{ form_widget(form.nombre) }}
+											<p class="help-block">Por defecto la fecha de hoy</p>
+										</div>
+									</div>
+									<div class="control-group">
+										<button class="btn btn-alt btn-large btn-dark" type="submit">Descargar</button>
+									</div>
+								</fieldset>
+							</form></section>
+					</article>
+
+				</div>
+			</section>
+ {% endblock %}

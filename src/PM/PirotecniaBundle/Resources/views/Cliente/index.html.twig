@@ -1,0 +1,149 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block title "Clientes" %}
+{% block content %}
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $('.edit3').on('click', function(){
+        $('#utility_body').load(
+            $(this).attr('href'),
+            function(response, status, xhr) {
+                if (status === 'error') {
+                    //console.log('got here');
+                    $('#utility_body').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');
+                }
+                return this;
+            }
+        );
+    });
+});
+-->
+</script>
+		<section role="main" class="container">
+				<div class="row">
+					<!-- Data block -->
+					<article class="span12 blue data-block">
+						<header><h2>B&uacute;squeda de Clientes</h2></header>
+						<section><form action="{{ path('cliente') }}" method="post" {{ form_enctype(filterForm) }} novalidate="novalidate">
+						<span class="span6">
+									<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+											{{ form_label(filterForm.nombre, 'Nombre', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.nombre, { 'attr': {'class': 'span3'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.direccion, 'Dirección', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.direccion, { 'attr': {'class': 'span3'}}) }}</div>
+										</div>
+									<div class="control-group">
+											{{ form_label(filterForm.localidad, 'Localidad', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.localidad, { 'attr': {'class': 'span3'}}) }}</div>
+										</div>
+								</div>
+						</span>
+						<span class="span4">
+									<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+											{{ form_label(filterForm.nif, 'Nif', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.nif, { 'attr': {'class': 'input-small'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.cp, 'Código Postal', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.cp, { 'attr': {'class': 'input-small'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.provincia_cliente, 'Provincia', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.provincia_cliente, { 'attr': {'class': 'span2'}}) }}</div>
+										</div>
+									</div>
+						</span>
+						<div class="span10"><div class="row">
+										<div style="width:300px; float:left;" class="form-actions form-right">
+											<a class="btn btn-alt btn-primary" data-toggle="modal" href="#modalClientef"><span class="icon-plus"></span>Nuevo Cliente</a>
+										</div>
+										<div style="float:right;" class="form-actions form-left">
+											<button class="btn btn-alt btn-primary" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+											<button class="btn btn-alt btn-primary" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+										</div>
+							</div></div>
+						</section> {{ form_widget(filterForm._token) }}</form>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<section>
+							<table class="table table-striped table-bordered table-hover table-media">
+								<thead>
+									<tr>
+
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Localidad</th>
+                <th>Cp</th>
+                <th>Telefono</th>
+                <th>Movil</th>
+                <th>Email</th>
+                <th>Operaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="#clienteModal{{ entity.id }}" data-toggle="modal">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.direccion }}</td>
+                <td>{{ entity.localidad }}</td>
+                <td>{{ entity.cp }}</td>
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.movil }}</td>
+                <td><a href="mailto:{{ entity.email }}">{{ entity.email }}</a></td>
+                <td>
+            		<div class="btn-group">
+							<a class="btn btn-small" href="#clienteModal{{ entity.id }}" data-toggle="modal"><span class="icon-eye-open"></span></a>
+								<div class="modal modalClienteshow fade hide" id="clienteModal{{ entity.id }}">
+									{% include 'PMPirotecniaBundle:Cliente:vista.html.twig' with { 'entity' : entity } %}
+								</div>
+									<a class="btn btn-small edit3" data-toggle="modal" data-target="#modalClienteedit" href="{{ path('cliente_edit', { 'id': entity.id }) }}"><span class="icon-pencil"></span></a>
+								<div id="modalClienteedit" class="modal hide fade modalClientef" tabindex="-1">
+								  <div class="modal-body" id="utility_body">
+								  </div>
+								</div><!-- <a title="Borrar" onclick="return confirm('Desea eliminar del Almacen?');" href="/PB2.2/web/app_dev.php/fabrica/almacen/270/borrar" class="btn btn-small"><span class="icon-trash"></span></a> -->
+        			</div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+  		</table>
+  		  		<div class="pagination pagination-right">{{ pagerHtml|raw }}</div>
+					 <form id="formmostrar" name="formmostrar" method="post" action="{{ path('cliente') }}">
+						    <div class="dataTables_length"><label>Mostrar
+						    	<select name="cuantos" id="cuantos" onchange="this.form.submit()" class="input-small">
+						        {% for item in cuantos %}
+						                <option value="{{ item }}" {% if item == entradas %} selected="selected" {% endif %}>{{ item }}</option>
+						        {% endfor %}
+						        </ul>
+						    	</select></label>
+						    </div>
+						    </form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+			</section>
+			<div class="modal modalClientef fade hide" id="modalClientef">
+			<form name="clientef" id="clientef" class="form-horizontal no-margin" action="{{ path('cliente_create') }}" method="post"  {{ form_enctype(form) }}>
+						<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Crear Cliente</h3><hr /></div>
+			{% include 'PMPirotecniaBundle:Cliente:form.html.twig' with { 'form' : form } %}
+						    <div style="display:block;">{{ form_errors(form) }} </div>
+							{{ form_widget(form._token) }}
+						</form>
+			</div>
+ {% endblock %}

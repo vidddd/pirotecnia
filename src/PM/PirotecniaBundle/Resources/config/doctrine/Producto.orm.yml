@@ -1,0 +1,33 @@
+PM\PirotecniaBundle\Entity\Producto:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    nombre:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    numero:
+      type: string
+      length: 255
+      nullable: true
+    riesgo:
+      type: integer
+      nullable: false
+    peso:
+      type: float
+      nullable: true
+    disabled:
+      type: boolean
+      nullable: true
+  oneToMany:
+    productos:
+      targetEntity: PM\PirotecniaBundle\Entity\ProductoCaja
+      mappedBy: producto
+      cascade: [ persist ]  
+  lifecycleCallbacks: {  }

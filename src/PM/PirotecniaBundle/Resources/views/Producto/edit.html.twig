@@ -1,0 +1,8 @@
+		<form name="productof" class="form-horizontal no-margin" action="{{ path('producto_update', { 'id': entity.id }) }}" method="post">	
+				<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Modificar Producto</h3><hr /></div>
+			
+{% include 'PMPirotecniaBundle:Producto:form.html.twig' with { 'form' : form } %} 
+					    <div style="display:block;">{{ form_errors(form) }} </div>
+							{{ form_widget(form._token) }}
+		</form>
+			</div>

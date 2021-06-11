@@ -1,0 +1,170 @@
+<form name="cajaform" id="cajaform" class="form-horizontal no-margin" action="{{ caja.id  ? path('espectaculo_caja_edit', { 'id': id, 'espectaculoid': espectaculo.id }) : path('espectaculo_anadir_caja', { 'id': espectaculo.id }) }}" method="post"  {{  form_enctype(cajaform) }}>																		
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>{{ label }} Caja</h3><hr /></div>
+<div class="modal-body" id="anadirCaja"><fieldset>
+	<div style="display:none;"><div class="controls"><div class="input-append no-margin">
+			{{ form_widget(cajaform.espectaculo, { 'attr':{'class': ''}}) }}
+		</div></div>
+	</div>
+	<div class="anadir-caja">
+		 <a href="#anadirProducto" id="anadirProducto" class="btn btn-alt btn-green"><span class="icon-plus"></span>Añadir Producto</a> 
+	</div>
+	<table class="table table-striped table-hover tablecajas">
+		<thead>
+			<tr class="item-row">
+				<th width="20">Cantidad</th><th>Producto</th><th style="width:50px;">Peso</th><th width="30">Borrar</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for linea in cajaform.cajas %}
+                {{ _self.prototype(linea) }}
+		   {% endfor %}
+		 <tfoot>
+			<tr> <td colspan="2" class="pesototal"><strong>Peso Total&nbsp;&nbsp;&nbsp;</strong></td>
+			<td class="pesototalv"><strong><span class="pesocaja">{{ cajaform.peso.vars.value|number_format }}</span></strong></td><td></td>
+			</tr>
+		</tfoot>
+		</tbody>
+	</table>
+		<div class="pesocajav" style="display:none">
+				{{ form_widget(cajaform.peso, { 'attr':{'class': 'input-small numeric', 'required': true}}) }}
+		</div>
+	   {% macro prototype(linea) %}
+			<tr class="row3">
+					<td class="celdaCantidad">{{ form_widget(linea.cantidad, { 'attr': {'class': 'input-cantidad icantidad numeric'}}) }}</td>
+					<td>{{ form_widget(linea.producto, { 'attr': {'class': 'productoCaja iproducto span4'}}) }}</td>
+					<td>{{ form_widget(linea.peso, { 'attr': {'class': 'input-peso ipeso numeric'}}) }}</td>
+					<td class="celdaBorrar"><a href="#" class="deleteProducto"><span class="icon-remove"></span></a></td>
+			</tr>
+	     {% endmacro %}
+			<div class="prototipo" data-prototype="{{ _self.prototype(cajaform.cajas.vars.prototype)|e }}"></div>
+</fieldset>
+	<table>
+		<tr>
+			<td width="250">
+				<div class="control-group">{{ form_label(cajaform.riesgo, null, { 'label': 'División de Riesgo', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls">{{ form_widget(cajaform.riesgo, { 'attr':{'class': 'input-small'}}) }}
+					</div></div>
+			</td>
+			<td width="200">
+				<div class="control-group">{{ form_label(cajaform.pesobruto, null, { 'label': 'Peso Bruto', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls"><div class="input-prepend input-append">{{ form_widget(cajaform.pesobruto, { 'attr':{'class': 'input-small numeric'}}) }}<span class="add-on">Grs</span></div>
+					</div></div>
+				</div>
+			</td>
+		</tr>
+		</table>	
+</div>
+	
+<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+	<button style="float:right;" type="submit" name="guardar" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar Caja</button> 
+</div>
+	<div style="display:block;">{{  form_errors(cajaform) }} </div>{{  form_widget(cajaform._token) }}
+</form>	
+<script><!--
+    var add = function() {
+        var index = $('table.tablecajas tbody tr').length;
+        var prototype = $('.prototipo').attr('data-prototype');
+        var row = prototype.replace(/__name__/g, index);
+       $('table.tablecajas tbody').append(row);
+    };
+
+    $('#anadirProducto').live('click', function(event) {
+    	add();
+    	//bind(); 
+    	event.preventDefault();
+    });
+
+    $(".deleteProducto").live('click',function(event){
+        $(this).closest('tr').remove();
+         update_total();
+        event.preventDefault();
+      });
+    $('.productoCaja').live('change', function(event) {
+		// comprueba que no existe otro producto igual
+		var actual = $(this).val();var count=0;
+		$('select.productoCaja').each(function() {
+        	if(actual == $(this).val()) count++;
+    	});
+		if(count > 1) {
+			$(this).val('');
+			$.jGrowl("No se puede repetir el Producto en la misma Caja.", {
+				header: 'Error',
+				position: 'center',
+				sticky: false, life: 2000,
+				theme: 'red'
+			});
+		}
+		// Obtiene por ajax el peso del producto y lo pone en el campo peso (multiplicado por la cantidad si tiene)
+		var row = $(this).parents('.row3');
+		var cantidad = parseInt(row.find('.icantidad').val());
+		if(cantidad != '' && actual != '') {
+			var peso = getPeso(actual);
+				row.find('.ipeso').val(cantidad * peso);
+		} else { row.find('.ipeso').val(''); }
+		update_total();
+    	event.preventDefault();
+    });
+    $('.ipeso').live('change', function(event) {
+		update_total();
+    	event.preventDefault();
+    });
+    $('.ipeso').live('click', function(event) {
+		$(this).numeric({ negative : false });
+    });
+    $('.icantidad').live('click', function(event) {
+		$(this).numeric({ negative : false });
+    });
+    function bind() {
+  	  $(".icantidad").blur(update_peso);
+  	  //$(".ipeso").blur(update_peso);
+  	}
+    function update_peso() {
+      var row = $(this).parents('.row3');
+	  var cantidad = parseInt($(this).val());
+  	  var peso = row.find('.ipeso').val();
+  	  var producto = row.find('.iproducto').val();
+	  if (peso != '' && producto != '') {
+		 	// Obtiene el peso del producto y hacel el calculo
+		 	var peso = getPeso(producto);
+		    setTimeout(function () {
+			 	row.find('.ipeso').val(cantidad * peso);
+		    }, 1000); // in milliseconds
+		    update_total();
+		} else {
+			// No hace nada
+	    }
+  	}
+    function update_total() {
+          total = 0;
+	  	  $('.ipeso').each(function(i){
+	  	    var peso = $(this).val();
+	  	    if (peso != '') parseFloat(total += parseFloat(peso));
+	  	  });
+  	  $('.pesocaja').html(roundNumber(total,2));
+  	  $('#caja_peso').val(roundNumber(total,2));
+  	}
+  	function getPeso(productoid) {
+		var peso = 0;
+  		$.ajax({
+			url: "{{ path('get_peso_producto') }}",
+			type: "post",
+			dataType: "json",
+			async: false,
+			data: {productoid: productoid},
+			success: function(resp){
+				peso = parseFloat(resp.peso);
+			},
+			error: function(jqXHR,estado,error){ alert("error"); },
+			complete: function(jqXHR,estado){},
+			timeout: 10000 });
+		 return peso;
+  	}
+    $(document).ready(function() {
+    	  bind();
+    	});
+    function roundNumber(number,decimals) {
+        var amt = parseFloat(number);
+        return amt.toFixed(decimals);
+    }
+    -->      
+</script>

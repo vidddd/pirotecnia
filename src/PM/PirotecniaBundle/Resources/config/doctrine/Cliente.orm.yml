@@ -1,0 +1,95 @@
+PM\PirotecniaBundle\Entity\Cliente:
+  type: entity
+  table: null
+  repositoryClass: PM\PirotecniaBundle\Entity\ClienteRepository
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    nombre:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    nif:
+      type: string
+      length: 15
+      fixed: false
+      nullable: false
+    fechaalta:
+      type: date
+      nullable: false
+    direccion:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    localidad:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+    cp:
+      type: string
+      length: 5
+      fixed: false
+      nullable: false 
+    pais:
+      type: string
+      length: 100
+      fixed: false
+      nullable: true
+    telefono:
+      type: string
+      length: 15
+      fixed: false
+      nullable: true
+    fax:
+      type: string
+      length: 15
+      fixed: false
+      nullable: true
+    movil:
+      type: string
+      length: 15
+      fixed: false
+      nullable: true
+    web:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+    email:
+      type: string
+      length: 255
+      fixed: false
+      nullable: true
+    cuenta:
+      type: string
+      length: 30
+      fixed: false
+      nullable: true
+    descuento:
+      type: smallint
+      nullable: true
+    recargo:
+      type: boolean
+      fixed: false
+      nullable: true
+    observaciones:
+      type: text
+      nullable: true
+  oneToMany:
+    espectaculo:
+        targetEntity: PM\PirotecniaBundle\Entity\Espectaculo
+        mappedBy: cliente
+  manyToOne:
+    provincia_cliente:
+      targetEntity: PM\InicioBundle\Entity\Provincias
+      inversedBy: provincia2
+      joinColumn:
+        name: provincia_id
+  lifecycleCallbacks: 
+    prePersist: [ setFechaAltaPre ]

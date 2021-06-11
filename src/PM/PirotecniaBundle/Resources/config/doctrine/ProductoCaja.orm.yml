@@ -1,0 +1,29 @@
+PM\PirotecniaBundle\Entity\ProductoCaja:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    cantidad:
+      type: integer
+    peso:
+      type: float
+  manyToOne:
+    caja:
+      targetEntity: PM\PirotecniaBundle\Entity\Caja
+      inversedBy: cajas
+      joinColumn:
+        name: caja_id
+        referencedColumnName: id
+        onDelete: CASCADE
+    producto:
+      targetEntity: PM\PirotecniaBundle\Entity\Producto
+      inversedBy: productos
+      joinColumn:
+        name: producto_id
+        referencedColumnName: id
+        onDelete: CASCADE
+  lifecycleCallbacks: {  }

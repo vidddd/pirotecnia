@@ -1,0 +1,15 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block title "Clientes" %}
+{% block content %}
+    <h1>Cliente creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cliente') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

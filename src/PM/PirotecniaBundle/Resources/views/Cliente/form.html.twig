@@ -1,0 +1,61 @@
+	<div class="modal-body">
+							<fieldset>
+							  <div class="control-group">
+									{{ form_label(form.nombre, null, { 'label': 'Nombre', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.nombre, { 'attr':{'class': 'span4'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.nif, null, { 'label': 'NIF', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.nif, { 'attr':{'class': 'input-small'}}) }}
+									</div>
+								</div> 
+							  <div class="control-group">
+									{{ form_label(form.direccion, null, { 'label': 'Dirección', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.direccion, { 'attr':{'class': 'span4'}}) }}
+									</div>
+								</div> 
+								  <div class="control-group">
+									{{ form_label(form.localidad, null, { 'label': 'Localidad', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.localidad, { 'attr':{'class': 'span3'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.cp, null, { 'label': 'Código Postal', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.cp, { 'attr':{'class': 'input-small numeric'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.provincia_cliente, null, { 'label': 'Provincia', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.provincia_cliente, { 'attr':{'class': 'span2'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.telefono, null, { 'label': 'Teléfono', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.telefono, { 'attr':{'class': 'input-small numeric'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.movil, null, { 'label': 'Móvil', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.movil, { 'attr':{'class': 'input-small numeric'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.email, null, { 'label': 'Email', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.email, { 'attr':{'class': 'span2'}}) }}
+									</div>
+								</div> 
+								</fieldset>	<div class="clearfix"></div>
+							</div>
+						<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+								 <button style="float:right;" type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar</button> 
+								</div>

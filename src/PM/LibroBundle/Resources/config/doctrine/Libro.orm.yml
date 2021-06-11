@@ -1,0 +1,65 @@
+PM\LibroBundle\Entity\Libro:
+    type: entity
+    table: null
+    repositoryClass: PM\LibroBundle\Entity\LibroRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        fecha:
+            type: date
+        cartaporte:
+            type: string
+            length: 255
+            nullable: true
+        clase:
+            type: smallint
+        procedenciad:
+            type: text
+            nullable: true
+        folio:
+            type: string
+            length: 255
+            nullable: true
+        asiento:
+            type: integer
+            nullable: true
+        entrada:
+            type: float
+            nullable: true
+            options:
+                default: 0
+        salida:
+            type: float
+            nullable: true
+            options:
+                default: 0
+        existencias:
+            type: float
+            nullable: true
+        #Existencias de Producto Terminado
+        existencias2:
+            type: float
+            nullable: true
+        #Existencias de Producto Intermedio
+        existencias11g:
+            type: float
+            nullable: true
+        existencias13g:
+            type: float
+            nullable: true
+        existencias14g:
+            type: float
+            nullable: true
+        existencias14s:
+            type: float
+            nullable: true
+        ano:
+            type: integer
+        mes:
+            type: integer
+        producto:
+            type: smallint
+    lifecycleCallbacks: {  }

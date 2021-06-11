@@ -1,0 +1,36 @@
+{% extends 'PMInicioBundle::base.html.twig' %}
+   {% block body %}
+<body class="login">
+		
+		<!-- Main page container -->
+		<section class="container" role="main">
+
+			<div class="login-logo">
+				<a href="login.html" class="brand">Sangoma</a>
+				<h4>Welcome to Sangoma</h4>
+			</div>
+
+			<form method="post" action="index.html">
+				<div class="control-group">
+					<div class="form-controls">
+						<div class="input-prepend">
+							<span class="add-on"><span class="icon-user"></span></span><input id="icon" type="text" placeholder="Enter your name" name="login">
+						</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="form-controls">
+						<div class="input-prepend">
+							<span class="add-on"><span class="icon-key"></span></span><input id="password" type="password" placeholder="Password" name="password">
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-alt btn-primary btn-large btn-block" type="submit">Login</button>
+				<a class="login-link" href="#">Lost your password?</a>
+			</form>
+			
+		</section>
+		<!-- /Main page container -->
+		
+	</body>
+	{% endblock %}

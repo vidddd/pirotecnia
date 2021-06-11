@@ -1,0 +1,68 @@
+<table>
+<!--
+  <tr>
+    <td>
+      <div class="control-group">
+        {{ form_label(form.fecha, null, { 'label': 'Fecha', 'label_attr': {'class': 'control-label'} }) }}
+        <div class="controls"><div class="input-append no-margin">
+          {{ form_widget(form.fecha, { 'attr':{'class': 'input-small datepicker'}}) }}<span class="add-on"><i class="icon-calendar"></i></span>
+        </div></div>
+      </div>
+    </td>
+  </tr> -->
+  <tr>
+    <td>
+      <div class="control-group">
+      {{ form_label(form.clase, null, { 'label': 'Clase', 'label_attr': {'class': 'control-label'} }) }}
+      <div class="controls">
+        {{ form_widget(form.clase, { 'attr':{'class': 'span2'}}) }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="control-group">
+      {{ form_label(form.producto, null, { 'label': 'Tipo Producto', 'label_attr': {'class': 'control-label'} }) }}
+      <div class="controls">
+        {{ form_widget(form.producto, { 'attr':{'class': 'span3'}}) }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="control-group">
+      {{ form_label(form.cartaporte, null, { 'label': 'Carta de Porte', 'label_attr': {'class': 'control-label'} }) }}
+      <div class="controls">
+        {{ form_widget(form.cartaporte, { 'attr':{'class': 'span2'}}) }}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div class="control-group">
+        {{ form_label(form.procedenciad, null, { 'label': 'Procedencia o Destino', 'label_attr': {'class': 'control-label'} }) }}
+        <div class="controls">
+            {{ form_widget(form.procedenciad, { 'attr': {'cols': '64', 'rows': '3'} }) }}
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="control-group">
+      {{ form_label(form.entrada, null, { 'label': 'entrada', 'label_attr': {'class': 'control-label'} }) }}
+      <div class="controls input-append">
+          {{ form_widget(form.entrada, { 'attr':{'class': 'input-small numeric'}}) }}&nbsp;<span class="add-on">Kgs</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="control-group">
+      {{ form_label(form.salida, null, { 'label': 'Salida', 'label_attr': {'class': 'control-label'} }) }}
+      <div class="controls input-append">
+          {{ form_widget(form.salida, { 'attr':{'class': 'input-small numeric'}}) }}&nbsp;<span class="add-on"> Kgs</span>
+      </div>
+    </td>
+  </tr>
+</table>

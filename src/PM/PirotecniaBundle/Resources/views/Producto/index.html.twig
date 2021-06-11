@@ -1,0 +1,133 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block title "Productos" %}
+{% block content %}
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $('.edit3').on('click', function(){
+        $('#utility_body').load(
+            $(this).attr('href'),
+            function(response, status, xhr) {
+                if (status === 'error') {
+                    //console.log('got here');
+                    $('#utility_body').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');
+                }
+                return this;
+            }
+        );
+    });		    
+});
+-->
+</script>
+		<section role="main" class="container">
+				<!-- Grid row -->
+				<div class="row">
+					<!-- Data block -->
+					<article class="span12 green data-block"><form action="{{ path('producto') }}" method="post" {{ form_enctype(filterForm) }} novalidate="novalidate">
+						<header><h2>B&uacute;squeda de Productos</h2></header>
+						<section>
+								<span class="span10">
+									<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+											{{ form_label(filterForm.nombre, 'Nombre', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.nombre, { 'attr': {'class': 'span4'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.numero, 'Número de Catalogación', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.numero, { 'attr': {'class': 'span3'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.riesgo, 'Division de Riesgo', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.riesgo, { 'attr': {'class': 'span1'}}) }}</div>
+										</div>
+										<div class="control-group">
+											{{ form_label(filterForm.disabled, 'Desabilitado ?', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.disabled, { 'attr': {'class': 'span1'}}) }}</div>
+										</div>
+							</div>
+						<div class="span10" style="margin-top:10px;"><div class="row">
+										<div style="width:300px; float:left;" class="form-actions form-right">
+											<a class="btn btn-alt btn-success" data-toggle="modal" href="#modalClientef"><span class="awe-plus"></span>Nuevo Producto</a>
+										</div>
+										<div style="float:right;" class="form-actions form-left">
+											<button class="btn btn-alt btn-success" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+											<button class="btn btn-alt btn-success" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+										</div>
+							</div></div>				 {{ form_widget(filterForm._token) }}</form>
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+				<div class="row">
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<section>
+							<table class="table table-striped table-bordered table-hover table-media">
+								<thead>
+									<tr>
+									
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Número de Catalogación</th>
+                <th>División de Riesgo</th>
+                <th>Peso</th>
+                <th>Operaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr {% if entity.disabled %}class="disabled2"{% endif %}>
+                <td><a href="#productoModal{{ entity.id }}" data-toggle="modal">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.numero }}</td>
+                <td>{{ entity.riesgoText }}</td>
+                <td>{{ entity.peso|number_format(2,'.',',') }}</td>
+                <td>
+            		<div class="btn-group">
+							<a class="btn btn-small" href="#productoModal{{ entity.id }}" data-toggle="modal"><span class="icon-eye-open"></span></a>
+								<div class="modal modalClienteshow fade hide" id="productoModal{{ entity.id }}">
+									{% include 'PMPirotecniaBundle:Producto:vista.html.twig' with { 'entity' : entity } %} 
+								</div>
+							<a class="btn btn-small edit3" data-toggle="modal" data-target="#modalProductoedit" href="{{ path('producto_edit', { 'id': entity.id }) }}"><span class="icon-pencil"></span></a>	
+								<div id="modalProductoedit" class="modal hide fade modalClientef" tabindex="-1">
+								  <div class="modal-body" id="utility_body">
+								  </div>
+								</div>
+							<!-- <a title="Borrar" onclick="return confirm('Desea eliminar del Almacen?');" href="/PB2.2/web/app_dev.php/fabrica/almacen/270/borrar" class="btn btn-small"><span class="icon-trash"></span></a> -->  	
+        			</div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+  		</table>
+  		  		<div class="span4">
+					 <form id="formmostrar" name="formmostrar" method="post" action="{{ path('producto') }}"> 
+						    <div class="dataTables_length"><label>Mostrar 
+						    	<select name="cuantos" id="cuantos" onchange="this.form.submit()" class="input-small">   		
+						        {% for item in cuantos %}
+						                <option value="{{ item }}" {% if item == entradas %} selected="selected" {% endif %}>{{ item }}</option>
+						        {% endfor %}
+						        </ul>
+						    	</select></label>
+						    </div>
+						    </form>	
+
+		</div>
+  		<div class="span6"><div class="pagination pagination-right">{{ pagerHtml|raw }}</div></div>
+	   
+					</section>
+					</article>
+				</div>
+			</section>
+			<div class="modal modalClientef fade hide" id="modalClientef">
+				<form name="productof" id="clientef" class="form-horizontal no-margin" action="{{ path('producto_create') }}" method="post"  {{ form_enctype(form) }}>	
+				<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Crear Producto</h3><hr /></div>
+			
+				{% include 'PMPirotecniaBundle:Producto:form.html.twig' with { 'form' : form } %} 
+							    <div style="display:block;">{{ form_errors(form) }} </div>
+							{{ form_widget(form._token) }}
+				</form>
+			</div>
+ {% endblock %}

@@ -1,0 +1,148 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block title "Espectaculos" %}
+{% block content %}
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $('.edit3').on('click', function(event){
+        $('#editarCaja3').load($(this).attr('href'),
+            function(response, status, xhr) {
+            	if (status === 'error') {$('#anadirCaja3').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');}
+             }
+         );
+    	event.preventDefault();
+    });
+    $('.show3').on('click', function(event){
+        $('#anadirCaja3').load($(this).attr('href'),
+            function(response, status, xhr) {
+                if (status === 'error') {$('#anadirCaja3').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');}
+            }
+        );
+    	event.preventDefault();
+    });		
+});
+-->
+</script>
+<div id="espectaculo">
+<section class="container">
+	<div class="row">
+		<article class="span12 red data-block"><header><h2>Editar Espect&aacute;culo</h2></header>
+			<div class="row"><section><form action="{{ path('espectaculo_update', { 'id': espectaculo.id }) }}" method="post" {{ form_enctype(form) }}>
+				<div class="span10 form3">
+	<table>
+		<tr>
+			<td width="450">
+				<div class="control-group">{{ form_label(form.cliente, null, { 'label': 'Cliente', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls">{{ form_widget(form.cliente, { 'attr':{'class': 'span4'}}) }}
+					</div></div>
+			</td>
+			<td width="200">
+				<div class="control-group">{{ form_label(form.fecha, null, { 'label': 'Fecha', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls"><div class="input-append no-margin">{{ form_widget(form.fecha, { 'attr':{'class': 'input-small datepicker'}}) }}<span class="add-on"><i class="icon-calendar"></i></span>
+					</div></div>
+				</div>
+			</td>
+			<td width="200">
+				<div class="control-group">{{ form_label(form.hora, null, { 'label': 'Hora', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls"><div class="bootstrap-timepicker">{{  form_widget(form.hora, { 'attr':{'class': 'input-small'}}) }}
+					</div></div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div class="control-group">{{ form_label(form.descripcion, null, { 'label': 'Descripción', 'label_attr': {'class': 'control-label'} }) }}
+					<div class="controls">{{ form_widget(form.descripcion, { 'attr':{'class': 'span6'}}) }}
+					</div></div>
+			</td>
+			<!-- <td>
+				<div class="control-group"><label for="espectaculo_numerocajas" class="control-label required">Número de Cajas</label>
+					<div class="controls"><input type="text" value="{{ espectaculo.NumeroCajas }}" class="input-small" name="espectaculo[numerocajas]" id="espectaculo_numerocajas">
+					</div></div>
+				</div><div class="clearfix"></div>
+				<div class="control-group"><label for="espectaculo_pesototal" class="control-label required">Peso Total</label>
+					<div class="controls"><input type="text" value="{{ espectaculo.pesoTotal|number_format }}" class="input-small" name="espectaculo[pesototal]" id="espectaculo_pesototal">
+					</div></div>
+				</div>
+			</td>-->
+		</tr>
+	</table>
+				</div>
+			</section>
+			</div>
+			<section class="cajas">
+					<legend>Cajas</legend>
+					<table class="table table-striped table-bordered table-hover table-media control-group">
+								<thead>
+									<tr>									
+						                <th>Numero</th>
+						                <th>Productos</th>
+						                <th>División de Riesgo</th>
+						                <th>Peso</th>
+						                <th width="150">Operaciones</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+						        {% for caja in espectaculo.cajas %}
+						            <tr>
+						                <td><a href="" data-toggle="modal">{{ loop.index }}</a></td>
+						                <td>{% for producto in caja.cajas %}<p>({{ producto.cantidad }}) {{ producto.producto.nombre }}</p>
+						                	{% endfor %}
+						                </td>
+						                						                <td>{{ caja.riesgoText }}</td>
+						                <td>{{ caja.peso|number_format }} Grs</td>
+
+					<td class="toolbar">
+											<div class="btn-group">
+												<a class="btn btn-small"><span class="icon-eye-open"></span></a>
+												<a title="Editar Caja" class="btn btn-small edit3" data-toggle="modal" data-target="#modalCajaedit" href="{{ path('espectaculo_caja_edit', { 'id': caja.id, 'espectaculoid': espectaculo.id }) }}"><span class="icon-pencil"></span></a>
+													<div id="modalCajaedit" class="modal hide fade modalEspectaculof">
+														<div id="editarCaja3"></div>
+													</div>
+												<a title="Eliminar Caja" onclick="return confirm('Desea eliminar la Caja? Esta acción no se puede deshacer');" href="{{ path('espectaculo_caja_delete', { 'id': caja.id, 'espectaculoid': espectaculo.id }) }}" class="btn btn-small"><span class="icon-remove"></span></a>
+												<a title="Imprimir Caja" target="_blank" href="{{ path('espectaculo_caja_print', { 'id': caja.id, 'espectaculoid': espectaculo.id, 'numcaja': loop.index }) }}" class="btn btn-small"><span class="icon-print"></span></a>
+											</div>
+										</td>
+						            </tr>
+						        {% endfor %}
+						        </tbody>
+						        <tfoot>
+						        	<tr><td>{{ espectaculo.NumeroCajas }} Cajas</td><td class="pesototal"><strong>Peso Total</strong></td><td></td><td><strong>{{ espectaculo.pesoTotal|number_format }} Grs</strong></td><td></td>
+						        	</tr>
+						        </tfoot>
+						  		</table><div class="anadir-caja">
+						  		 <a class="btn btn-alt btn-danger show3" data-toggle="modal" data-target="#anadirCaja" href="{{ path('espectaculo_anadir_caja', { 'id': espectaculo.id }) }}"><span class="icon-plus"></span>A&ntilde;adir Caja</a> 
+										<div class="modal modalEspectaculof fade hide" id="anadirCaja">		
+											<div id="anadirCaja3"></div>
+										</div>
+									</div>	
+						</section>
+			<section>
+				<div class="span10">   
+					<div class="row" class="botonesf">
+					<table><tr>
+						<td width="400"><div class="botonf">
+							<a href="{{ path('espectaculo') }}" class="btn btn-alt"">Cancelar</a>
+          						</div>
+					    </td>
+					    <td width="450">
+	 						<div class="botonf" style=""><a class="btn btn-alt btn-warning" href="{{ path('espectaculo_print', { 'id': espectaculo.id }) }}"><span class="awe-print"></span>Imprimir Espect&aacute;culo</a>
+							</div>
+						</td>
+						<td width="200">
+							<div class="botonf">
+								<button type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar Espect&aacute;culo</button> 	
+							</div>
+						</td>
+					</tr></table>
+					</div><br />
+				</div>
+			</section>
+		</article>
+	</div>
+	 <div style="display:block;">{{  form_errors(form) }} </div>
+							{{  form_widget(form._token) }}
+	</form>
+</section></div>
+
+{% endblock %}

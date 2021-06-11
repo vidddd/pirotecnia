@@ -1,0 +1,64 @@
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Detalle Espect&aacute;culo</h3><hr /></div>
+<div class="modal-body">
+	<div class="span4">
+		<dl class="dl-horizontal">
+			<dt>Cliente:</dt>
+			<dd>{{ espectaculo.cliente }}</dd>
+			<dt>Descripci&oacute;n:</dt>
+			<dd>{{ espectaculo.descripcion }}</dd>
+
+		</dl>
+	</div>
+	<div class="span3">
+		<dl class="dl-horizontal">
+			<dt>Fecha:</dt>
+			<dd>{{ espectaculo.fecha|date('d/m/Y') }}</dd>
+			<dt>Hora:</dt>
+			<dd>{{ espectaculo.hora|date('H:i') }}</dd>
+						<dt>Núm de Cajas:</dt>
+			<dd>{{ espectaculo.NumeroCajas }}</dd>
+						<dt>Peso Total:</dt>
+			<dd>{{ espectaculo.pesoTotal|number_format }} Grs</dd>
+		</dl>
+	</div>
+		<div class="span4">
+		<dl class="dl-horizontal">
+
+		</dl>
+	</div>
+		<div class="span2">
+		<dl class="dl-horizontal">
+
+		</dl>
+	</div>
+	{% for caja in espectaculo.cajas %}<div class="cajaItem">
+		<h4>Caja {{ loop.index }}</h4>
+		<table class="table table-bordered table-hover" style="width:auto;">
+								<thead>
+									<tr>
+										<th style="width:70px;">Cantidad</th>
+										<th style="width:380px;">Producto</th>
+										<th style="width:80px;">Peso</th>
+									</tr>
+								</thead>
+								<tbody>
+								{% for producto in caja.cajas %}
+									<tr>
+										<td>{{ producto.cantidad }}</td>
+										<td>{{ producto.producto.nombre }}</td>
+										<td>{{ producto.peso|number_format }} Grs</td>
+									</tr>						        
+								{% endfor %}
+								<tr>
+										<td colspan="2" class="pesototal"><strong>Peso Total</strong></td>
+										<td class="pesototalv"><strong>{{ caja.peso|number_format }} Grs</strong></td>
+									</tr>
+								</tbody>
+		</table> </div>
+	{% endfor %}<div class="clearfix"></div>
+	<div class="row">
+
+	</div>
+</div>
+<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:right;" data-dismiss="modal">Cerrar</a></div>
+			

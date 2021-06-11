@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>UI &amp; Buttons | Sangoma Bootstrap Admin Template</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap Modal Extended Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/bootstrap-modal.css'>
+
+		<!-- jQuery Snippet Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/jquery.snippet.css'>
+		
+		<!-- jQuery jGrowl Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/jquery.jgrowl.css'>
+
+		<!-- Styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-blue.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+
+		<script src="js/libs/modernizr.js"></script>
+		<script src="js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]:not(.demoPopover)').tooltip({
+					placement: 'top'
+				});
+				
+				// Dropdowns
+				$('.dropdown-toggle').dropdown();
+				
+				// Tabs
+				$('.demoTabs a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+				
+				// Radio buttons
+				$('.demoBtns').button();
+
+				// Popover
+				$('.demoPopover').popover({
+					trigger: 'hover'
+				});	
+
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile -->
+				<div class="user-profile">
+					<figure>
+
+						<!-- User profile avatar -->
+						<img alt="John Pixel avatar" src="http://placekitten.com/60/60">
+
+						<!-- User profile info -->
+						<figcaption>
+							<strong><a href="#" class="">John Pixel</a></strong>
+							<ul>
+								<li><a href="#" title="Message inbox">inbox</a></li>
+								<li><a href="#" title="Account settings">settings</a></li>
+								<li><a href="#" title="Logout">logout</a></li>
+							</ul>
+						</figcaption>
+						<!-- /User profile info -->
+
+					</figure>
+				</div>
+				<!-- /User profile -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li><a href="index.html"><span class="icon-home"></span> Dashboard</a></li>
+							<li>
+								<a href="forms.html" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-tasks"></span> Forms &amp; Tables<span class="badge">6</span></a>
+								<ul class="dropdown-menu">
+									<li><a href="forms.html"><span class="icon-align-left"></span>Forms</a></li>
+									<li><a href="tables.html"><span class="icon-th-list"></span>Tables</a><span class="badge">23</span></li>
+								</ul>
+							</li>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-asl"></span> Elements</a>
+								<ul class="dropdown-menu">
+									<li><a href="charts.html"><span class="icon-graph"></span> Charts</a></li>
+									<li><a href="gallery.html"><span class="icon-picture"></span> Gallery</a></li>
+									<li><a href="file-explorer.html"><span class="icon-inbox"></span> File explorer</a></li>
+									<li><a href="calendar.html"><span class="icon-calendar"></span> Calendar</a></li>
+									<li class="divider"></li>
+									<li class="active"><a href="ui-buttons.html"><span class="icon-cogs"></span> UI &amp; Buttons</a></li>
+									<li><a href="typo.html"><span class="icon-font"></span> Typography</a><span class="badge">7</span></li>
+									<li><a href="grid.html"><span class="icon-th"></span> Grid</a></li>
+									<li><a href="goodies.html"><span class="icon-heart"></span> Goodies</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-file"></span> Pages</a>
+								<ul class="dropdown-menu">
+									<li><a href="eshop.html">Online store</a></li>
+									<li><a href="add-item.html">Add item / product</a></li>
+									<li><a href="invoice.html">Invoice</a></li>
+									<li><a href="user-profile.html">User profile</a></li>
+									<li><a href="401.html">Error 401</a></li>
+									<li><a href="403.html">Error 403</a></li>
+									<li><a href="404.html">Error 404</a></li>
+									<li><a href="500.html">Error 500</a></li>
+									<li><a href="503.html">Error 503</a></li>
+									<li><a href="login.html">Login page</a></li>
+								</ul>
+							</li>
+							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<header>
+							<h2><span class="icon-cogs"></span> Buttons and button groups</h2>
+							<ul class="data-header-actions">
+								<li class="demoTabs"><a href="#default" class="btn btn-alt">Default</a></li>
+								<li class="demoTabs active"><a href="#alternative" class="btn btn-alt">Sangoma</a></li>
+							</ul>
+						</header>
+						<section class="tab-content">
+								
+							<!-- Tab #default -->
+							<div class="tab-pane" id="default">
+							
+								<h3>Default buttons</h3>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Button</th>
+											<th>Class</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><button class="btn">Default</button></td>
+											<td><code>btn</code></td>
+											<td>Standard gray button with gradient</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-primary">Primary</button></td>
+											<td><code>btn btn-primary</code></td>
+											<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-info">Info</button></td>
+											<td><code>btn btn-info</code></td>
+											<td>Used as an alternative to the default styles</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-success">Success</button></td>
+											<td><code>btn btn-success</code></td>
+											<td>Indicates a successful or positive action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-warning">Warning</button></td>
+											<td><code>btn btn-warning</code></td>
+											<td>Indicates caution should be taken with this action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-danger">Danger</button></td>
+											<td><code>btn btn-danger</code></td>
+											<td>Indicates a dangerous or potentially negative action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-inverse">Inverse</button></td>
+											<td><code>btn btn-inverse</code></td>
+											<td>Alternate dark gray button, not tied to a semantic action or use</td>
+										</tr>
+									</tbody>
+								</table>
+								
+								<!-- Grid row -->
+								<div class="row-fluid">
+								
+									<!-- Different tags button styling -->
+									<div class="span4">
+										<h4>One class for multiple tags</h4>
+										<p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+										<a class="btn" href="">Link</a>
+										<button class="btn" type="submit">Button</button>
+										<input class="btn" type="button" value="Input">
+										<input class="btn" type="submit" value="Submit">
+									</div>
+									
+									<!-- Different button size -->
+									<div class="span4">
+										<h4>3 different sizes</h4>
+										<p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code>, for two additional sizes.</p>
+										<p>
+											<button class="btn btn-large">Action</button> <button class="btn btn-small">Action</button> <button class="btn btn-mini">Action</button>
+										</p>
+									</div>
+									
+									<!-- Disabled state styling -->
+									<div class="span4">
+										<h4>Disabled state</h4>
+										<p>For disabled buttons, add the <code>.disabled</code> class to links and the <code>disabled</code>, attribute for <code>&lt;button&gt;</code> elements.</p>
+										<p>
+											<a class="btn disabled" href="#">Disabled link</a>
+											<button class="btn disabled" disabled="disabled">Disabled button</button>
+										</p>
+									</div>
+									
+								</div>
+								<!-- /Grid row -->
+								
+								<!-- Grid row -->
+								<div class="row-fluid">
+								
+									<!-- Example button groups -->
+									<div class="span3">
+										<h4>Button groups</h4>
+										<p>
+											<div class="btn-group">
+												<button class="btn">Left</button><button class="btn">Middle</button><button class="btn">Right</button>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example button toolbars -->
+									<div class="span3">
+										<h4>Button toolbars</h4>
+										<p>
+											<div class="btn-toolbar">
+												<div class="btn-group">
+													<button class="btn">1</button><button class="btn">2</button><button class="btn">3</button>
+												</div>
+												<div class="btn-group">
+													<button class="btn">4</button><button class="btn">5</button><button class="btn">6</button>
+												</div>
+											</div>
+										</p>
+										<p>
+											<div class="btn-toolbar">
+												<div class="btn-group">
+													<button class="btn"><span class="icon-ok"></span></button><button class="btn"><span class="icon-remove"></span></button>
+												</div>
+												<div class="btn-group">
+													<button class="btn"><span class="icon-tag"></span></button><button class="btn"><span class="icon-print"></span></button><button class="btn"><span class="icon-refresh"></span></button>
+												</div>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example checkbox and radio toolbars -->
+									<div class="span3">
+										<h4>Checkbox toolbars</h4>
+										<p>
+											<div class="btn-group" data-toggle="buttons-checkbox">
+												<button class="btn">Left</button><button class="btn active">Middle</button><button class="btn active">Right</button>
+											</div>
+										</p>
+										<p>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-inverse">Left</button><button class="btn btn-inverse">Middle</button><button class="btn btn-inverse active">Right</button>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example button dropdowns -->
+									<div class="span3">
+										<h4>Button dropdowns</h4>
+										<p>
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+												<ul class="dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</div>
+										</p>
+										<p>
+											<div class="btn-group dropup">
+												<button class="btn">Right dropup</button><button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+												<ul class="dropdown-menu pull-right">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</div>
+										</p>
+									</div>
+									
+								</div>
+								<!-- /Grid row -->
+								
+							</div>
+							<!-- /Tab #default -->
+							
+							<!-- Tab #alternative -->
+							<div class="tab-pane active" id="alternative">
+							
+								<h3>Alternative buttons</h3>
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Button</th>
+											<th>Class</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><button class="btn btn-alt">Default</button></td>
+											<td><code>btn btn-alt</code></td>
+											<td>Standard gray button with gradient</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-primary ">Primary</button></td>
+											<td><code>btn btn-alt btn-primary</code></td>
+											<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-info">Info</button></td>
+											<td><code>btn btn-alt btn-info</code></td>
+											<td>Used as an alternative to the default styles</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-success">Success</button></td>
+											<td><code>btn btn-alt btn-success</code></td>
+											<td>Indicates a successful or positive action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-warning">Warning</button></td>
+											<td><code>btn btn-alt btn-warning</code></td>
+											<td>Indicates caution should be taken with this action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-danger">Danger</button></td>
+											<td><code>btn btn-alt btn-danger</code></td>
+											<td>Indicates a dangerous or potentially negative action</td>
+										</tr>
+										<tr>
+											<td><button class="btn btn-alt btn-inverse">Inverse</button></td>
+											<td><code>btn btn-alt btn-inverse</code></td>
+											<td>Alternate dark gray button, not tied to a semantic action or use</td>
+										</tr>
+									</tbody>
+								</table>
+								
+								<!-- Grid row -->
+								<div class="row-fluid">
+								
+									<!-- Different tags button styling -->
+									<div class="span4">
+										<h4>One class for multiple tags</h4>
+										<p>Use the <code>.btn .btn-alt</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+										<a class="btn btn-alt" href="">Link</a>
+										<button class="btn btn-alt" type="submit">Button</button>
+										<input class="btn btn-alt" type="button" value="Input">
+										<input class="btn btn-alt" type="submit" value="Submit">
+									</div>
+									
+									<!-- Different button size -->
+									<div class="span4">
+										<h4>3 different sizes</h4>
+										<p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code>, for two additional sizes.</p>
+										<p>
+											<button class="btn btn-alt btn-large">Action</button> <button class="btn btn-alt btn-small">Action</button> <button class="btn btn-alt btn-mini">Action</button>
+										</p>
+									</div>
+									
+									<!-- Disabled state styling -->
+									<div class="span4">
+										<h4>Disabled state</h4>
+										<p>For disabled buttons, add the <code>.disabled</code> class to links and the <code>disabled</code>, attribute for <code>&lt;button&gt;</code> elements.</p>
+										<p>
+											<a class="btn btn-alt disabled" href="#">Disabled link</a>
+											<button class="btn btn-alt disabled" disabled="disabled">Disabled button</button>
+										</p>
+									</div>
+									
+								</div>
+								<!-- /Grid row -->
+								
+								<!-- Grid row -->
+								<div class="row-fluid">
+								
+									<!-- Example button groups -->
+									<div class="span3">
+										<h4>Button groups</h4>
+										<p>
+											<div class="btn-group">
+												<button class="btn btn-alt">Left</button><button class="btn btn-alt">Middle</button><button class="btn btn-alt">Right</button>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example button toolbars -->
+									<div class="span3">
+										<h4>Button toolbars</h4>
+										<p>
+											<div class="btn-toolbar">
+												<div class="btn-group">
+													<button class="btn btn-alt">1</button><button class="btn btn-alt">2</button><button class="btn btn-alt">3</button>
+												</div>
+												<div class="btn-group">
+													<button class="btn btn-alt">4</button><button class="btn btn-alt">5</button><button class="btn btn-alt">6</button>
+												</div>
+											</div>
+										</p>
+										<p>
+											<div class="btn-toolbar">
+												<div class="btn-group">
+													<button class="btn btn-alt"><span class="icon-ok"></span></button><button class="btn btn-alt"><span class="icon-remove"></span></button>
+												</div>
+												<div class="btn-group">
+													<button class="btn btn-alt"><span class="icon-tag"></span></button><button class="btn btn-alt"><span class="icon-print"></span></button><button class="btn btn-alt"><span class="icon-refresh"></span></button>
+												</div>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example checkbox and radio toolbars -->
+									<div class="span3">
+										<h4>Checkbox toolbars</h4>
+										<p>
+											<div class="btn-group" data-toggle="buttons-checkbox">
+												<button class="btn btn-alt">Left</button><button class="btn btn-alt active">Middle</button><button class="btn btn-alt active">Right</button>
+											</div>
+										</p>
+										<p>
+											<div class="btn-group" data-toggle="buttons-radio">
+												<button class="btn btn-alt btn-inverse">Left</button><button class="btn btn-alt btn-inverse">Middle</button><button class="btn btn-alt btn-inverse active">Right</button>
+											</div>
+										</p>
+									</div>
+									
+									<!-- Example button dropdowns -->
+									<div class="span3">
+										<h4>Button dropdowns</h4>
+										<p>
+											<div class="btn-group">
+												<button class="btn btn-alt dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+												<ul class="dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</div>
+										</p>
+										<p>
+											<div class="btn-group dropup">
+												<button class="btn btn-alt">Right dropup</button><button class="btn btn-alt dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+												<ul class="dropdown-menu pull-right">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else here</a></li>
+													<li class="divider"></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</div>
+										</p>
+									</div>
+									
+								</div>
+								<!-- /Grid row -->
+								
+							</div>
+							<!-- /Tab #alternative -->
+							
+						</section>
+
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Example alerts -->
+					<!-- Data block -->
+					<article class="span6 red data-block">
+						<header>
+							<h2>Alerts</h2>
+						</header>
+						<section>
+							<div class="alert alert-gray fade in">
+								<button class="close" data-dismiss="alert">&times;</button >
+								<strong>Gray alert box!</strong> This is default style. Nothing special to see.
+							</div>
+							<div class="alert alert-error fade in">
+								<button class="close" data-dismiss="alert">&times;</button >
+								<strong>Error alert box!</strong> Nice red alert when something goes wrong.
+							</div>
+							<div class="alert alert-info fade in">
+								<button class="close" data-dismiss="alert">&times;</button >
+								<strong>Info alert box!</strong> Also a blue one for tips and info highlights.
+							</div>
+							<div class="alert alert-success fade in">
+								<button class="close" data-dismiss="alert">&times;</button >
+								<strong>Success alert box!</strong> If you play nice, you will see this one.
+							</div>
+							<div class="alert alert-inverse fade in">
+								<button class="close" data-dismiss="alert">&times;</button >
+								<strong>Black alert box!</strong> Come to the dark side, we have cookies.
+							</div>
+							<div class="alert alert-block fade in no-margin">
+								<button class="close" type="button" data-dismiss="alert">&times;</button >
+								<h4 class="alert-heading">Warning!</h4>
+								<p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+							</div>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span6 blue data-block">
+						<header>
+							<h2>Breadcrumbs</h2>
+							<form class="header-search">
+								<input type="text" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]" data-items="4" data-provide="typeahead" placeholder="Search…">
+							</form>
+						</header>
+						<section>
+
+							<ul class="breadcrumb">
+								<li><a href="#">Home</a> <span class="divider">/</span></li>
+								<li><a href="#">Library</a> <span class="divider">/</span></li>
+								<li class="active">Data</li>
+							</ul>
+
+							<p>Etiam elit ligula, vulputate nec sodales vel, porttitor eu elit. Nam dolor libero, dapibus vitae congue ut, sodales quis elit. Aenean erat nibh, dictum sit amet pulvinar eget, euismod eget ante. Aliquam sed lectus quis enim auctor porta ac ac nisl. Nullam tempor viverra eleifend. Praesent sed neque risus. Mauris ultricies, elit id condimentum venenatis, purus turpis tincidunt dui, ut eleifend eros neque a neque. Morbi mollis justo eu velit auctor blandit. Nam luctus lacus quam, et iaculis nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin quis dolor dui. Nullam non libero turpis, interdum rutrum lorem. Ut euismod, sem eget accumsan congue, eros nisl volutpat nisi, ut congue lacus enim eget eros. </p>
+						</section>
+						<footer>
+							<p>Praesent et sem id dui euismod accumsan et quis lectus. Fusce eget erat mi, et laoreet nibh. </p>
+						</footer>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Example jQuery Snippet -->
+					<!-- Data block -->
+					<article class="span6 gray data-block">
+						<header>
+							<h2>jQuery Snippet</h2>
+						</header>
+						<section>
+<pre class="html">
+&lt;pre&gt;
+	// comment
+	function checkMeaningOfLife ( decimal, success ) {
+		if ( parseInt(decimal,10) === 42 ) {
+			window.console.log(success);
+		}
+	};
+&lt;/pre&gt;
+</pre>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Example loading icons -->
+					<!-- Data block -->
+					<article class="span3 blue data-block">
+						<header>
+							<h2>Loading icons</h2>
+							<ul class="data-header-actions">
+								<li><span class="loading blue" title="Loading, please wait&hellip;">Loading&hellip;</span></li>
+							</ul>
+						</header>
+						<section>
+
+							<p>Sangoma comes with several predefined loading icons. If you want different image, color or size visit <a href="http://preloaders.net/" target="_blank">preloaders.net</a> and generate your own.</p>
+							<p><span class="loading red" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading blue" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading green" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading purple" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading turquoise" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading orange" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading gray" title="Loading, please wait&hellip;">Loading&hellip;</span> <span class="loading dark" title="Loading, please wait&hellip;">Loading&hellip;</span></p>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Example progress bars -->
+					<!-- Data block -->
+					<article class="span3 gray data-block">
+						<header>
+							<h2>Progress bars</h2>
+						</header>
+						<section>
+
+							<div class="progress progress-info">
+								<div class="bar" style="width: 20%">20%</div>
+							</div>
+							<div class="progress progress-success">
+								<div class="bar" style="width: 40%">40%</div>
+							</div>
+							<div class="progress progress-line progress-warning">
+								<div class="bar" style="width: 60%"></div>
+							</div>
+							<div class="progress progress-danger progress-striped">
+								<div class="bar" style="width: 80%"></div>
+							</div>
+							<div class="progress progress-line progress-inverse progress-striped active">
+								<div class="bar" style="width: 89%"></div>
+							</div>
+							<div class="progress progress-line">
+								<div class="bar bar-success" style="width: 35%;"></div>
+								<div class="bar bar-warning" style="width: 20%;"></div>
+								<div class="bar bar-danger" style="width: 10%;"></div>
+							</div>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Example popovers and modals -->
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Popover and modal</h2>
+						</header>
+						<section>
+
+							<h4>Popovers</h4>
+							<p>Hover over the button to trigger the popover.</p>
+							<a href="#" class="btn btn-alt btn-danger demoPopover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Hover for popover</a>
+							
+							<h4>Modal</h4>
+							<p>Not much to say here - basic modals. Click on the button to trigger modal window.</p>
+							<a class="btn btn-alt btn-primary" data-toggle="modal" href="#demoModal" >Launch Modal</a>
+							<div class="modal fade hide" id="demoModal">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">×</button>
+									<h3>Modal header</h3>
+								</div>
+								<div class="modal-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae enim ac ligula eleifend commodo id quis risus. Donec consequat lorem et metus facilisis vitae dapibus felis fermentum. Aenean imperdiet nibh vitae sem condimentum pharetra. Mauris molestie molestie faucibus. Aenean sit amet sem orci, at adipiscing dolor. Fusce feugiat odio vitae erat commodo sed accumsan ante sollicitudin. Integer mollis, tellus vel feugiat varius, risus quam lacinia erat, eu ultricies urna dolor ac metus. Mauris vestibulum euismod lectus, vitae vehicula nisl ullamcorper sit amet. In ac consectetur purus. Integer orci ipsum, sollicitudin non rutrum id, adipiscing eu augue. Nulla eget lorem elit. Curabitur vehicula porttitor suscipit.</p>
+								</div>
+								<div class="modal-footer">
+									<a href="#" class="btn btn-alt" data-dismiss="modal">Close</a>
+									<a href="#" class="btn btn-alt btn-primary">Save changes</a>
+								</div>
+
+							</div>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Example pagination -->
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Pagination</h2>
+						</header>
+						<section>
+
+							<div class="pagination pagination-right">
+								<ul>
+									<li><a href="#">&laquo;</a></li>
+									<li class="active"><a href="#">10</a></li>
+									<li class="disabled"><a href="#">...</a></li>
+									<li><a href="#">20</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</div>
+							<div class="pagination pagination-centered">
+								<ul>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+								</ul>
+							</div>
+							<div class="pagination">
+								<ul>
+									<li class="disabled"><a href="#"><span class="icon-arrow-left"></span></a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#"><span class="icon-arrow-right"></span></a></li>
+								</ul>
+							</div>
+							<ul class="pager">
+								<li><a href="#">&larr; Older</a></li>
+								<li><a href="#">Newer &rarr;</a></li>
+							</ul>
+								<ul class="pager">
+								<li class="previous disabled"><a href="#">&larr; Older</a></li>
+								<li class="next"><a href="#">Newer &rarr;</a></li>
+							</ul>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Bootstrap extended modal plugin -->
+		<script src="js/plugins/bootstrapModal/bootstrap-modalmanager.js"></script>
+		<script src="js/plugins/bootstrapModal/bootstrap-modal.js"></script>
+
+		<!-- jQuery Snippet -->
+		<script src="js/plugins/snippet/jquery.snippet.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+			
+				$('pre.html').snippet('html',{style:"rand01"});
+			
+			});
+		</script>
+		
+		<!-- jQuery jGrowl -->
+		<script type="text/javascript" src="js/plugins/jGrowl/jquery.jgrowl.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$.jGrowl("Huraga uses jQuery jGrowl plugin for notifications.", {
+					header: 'Default theme',
+					sticky: true
+				});
+				
+				$.jGrowl("Notifications are available in several styles.", {
+					header: 'Primary (primary) theme',
+					sticky: true,
+					theme: 'primary'
+				});
+				
+				$.jGrowl("Default gray style and style for each of 5 colors available.", {
+					header: 'Red (danger) theme',
+					sticky: true,
+					theme: 'red'
+				});
+				
+				$.jGrowl("jGrowl is very popular and flexible plugin.", {
+					header: 'Blue (info) theme',
+					sticky: true,
+					theme: 'blue'
+				});
+				
+				$.jGrowl('Check out jGrowl homepage for more info <a href="http://stanlemon.net/pages/jgrowl" target="_blank">http://stanlemon.net/pages/jgrowl</a>.', {
+					header: 'Green (success) theme',
+					sticky: true,
+					theme: 'green'
+				});
+				
+				$.jGrowl("jGrowl is distributed under the MIT and GPL licenses - which means you can do whatever you want with it.", {
+					sticky: true,
+					theme: 'orange'
+				});
+				
+				// You can style closer with same class
+				$.jGrowl.defaults.closerTemplate = '<div class="inverse">hide all notifications</div>';
+				
+			});
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,25 @@
+PM\InicioBundle\Entity\Provincias:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        codprovincia:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+        denprovincia:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+    oneToMany:
+        provincia2:
+            targetEntity: PM\PirotecniaBundle\Entity\Cliente
+            mappedBy: provincia_cliente
+            unique: false
+    lifecycleCallbacks: {  }

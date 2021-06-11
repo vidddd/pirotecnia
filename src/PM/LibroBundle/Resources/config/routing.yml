@@ -1,0 +1,3 @@
+libro:
+    pattern:  /libro
+    defaults: { _controller: PMLibroBundle:Default:index }

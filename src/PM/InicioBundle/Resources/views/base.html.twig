@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Pirotecnia Manchega</title>
+		
+		<!-- jQuery FullCalendar Styles -->
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/plugins/jquery.fullcalendar.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/plugins/bootstrap-timepicker.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/plugins/jquery.jgrowl.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/plugins/bootstrap-modal.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('js/jquery.keypad/jquery.keypad.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/plugins/daterangepicker.css') }}'>
+		<link rel='stylesheet' type='text/css' href='{{ asset('css/sangoma-blue.css') }} '>
+
+		<!-- JS Libs -->
+		<script type="text/javascript" src="{{ asset('js/libs/jquery.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/libs/modernizr.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/libs/selectivizr.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery.numeric.js') }}"  /> </script>
+		<script type="text/javascript" src="{{ asset('js/number.format.js') }}"  /> </script>
+		<script type="text/javascript" src="{{ asset('js/jquery.keypad/jquery.keypad.min.js') }}"  /> </script>
+		<script type="text/javascript" src="{{ asset('js/jquery.keypad/jquery.keypad-es.js') }}"  /> </script>
+		<script type="text/javascript" src="{{ asset('js/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/plugins/jGrowl/jquery.jgrowl.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/plugins/bootstrapTimePicker/bootstrap-timepicker.min.js') }}"></script>
+		<script>
+			$(document).ready(function(){
+				$(".numeric").numeric({ negative : false });
+				$(".kpad").keypad( {    //$.keypad.regional['es'],
+										layout: ['123' + $.keypad.CLOSE, '456' + $.keypad.CLEAR, '789' + $.keypad.BACK, $.keypad.SPACE + '0.'], 
+									});
+				$('.datepicker').datepicker({
+					"autoclose": true,
+					"format": "dd/mm/yyyy"
+				});
+				$('.datepicker2').datepicker({
+					"autoclose": true,
+					"format": "yyyy-mm-dd"
+				});
+				$('#espectaculo_hora').timepicker({
+					minuteStep: 5,
+					showInputs: false,
+					disableFocus: true,
+					showMeridian: false
+				});				    
+			});
+		</script>
+	</head>
+	<body class="{% block classbody %}login{% endblock %}">
+	   {% block body %}
+   {% endblock %}  
+   		<!-- Bootstrap extended modal plugin -->
+		<script type="text/javascript" src="{{ asset('js/bootstrap/bootstrap.min.js') }}" /></script>
+		<script type="text/javascript" src="{{ asset('js/plugins/bootstrapModal/bootstrap-modalmanager.js') }}" /></script>
+		<script type="text/javascript" src="{{ asset('js/plugins/bootstrapModal/bootstrap-modal.js') }}" /></script>
+		<script type="text/javascript" src="{{ asset('js/plugins/inputmask/bootstrap-inputmask.js') }}" /></script>
+	</body>
+</html>

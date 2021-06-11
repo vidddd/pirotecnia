@@ -1,0 +1,30 @@
+cliente:
+    pattern:  /
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:index" }
+
+cliente_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:show" }
+
+cliente_new:
+    pattern:  /new
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:new" }
+
+cliente_create:
+    pattern:  /create
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:create" }
+    requirements: { _method: post }
+
+cliente_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:edit" }
+
+cliente_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:update" }
+    requirements: { _method: post|put }
+
+cliente_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PMPirotecniaBundle:Cliente:delete" }
+    requirements: { _method: post|delete }

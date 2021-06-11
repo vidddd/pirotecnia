@@ -1,0 +1,73 @@
+{% extends 'PMInicioBundle::base.html.twig' %}
+{% block classbody "" %}
+   {% block body %}
+		<div id="wrapper">
+			<header id="header" class="container">
+				<h1>
+					<span class="brand">Pirotecnia Manchega</span>
+				</h1>
+				<div class="user-profile">
+					<figure>
+						<!-- <img alt="John Pixel avatar" src="http://placekitten.com/60/60"> -->
+						<figcaption>
+							<ul>
+							<li><strong>{# if app.user #}{{ app.user.username }} {# endif #}</strong></li>
+							<li><a href="{{ path('logout') }}" title="Salir" style="font-size: 14px;">Salir >></a></li>
+							</ul>
+						</figcaption>
+					</figure>
+				</div>
+				<nav class="main-navigation">
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li class="{% if 'inicio' in app.request.attributes.get('_route') %}inicioactive{% endif %} iniciogris">
+								<a href="{{ path('pm_inicio_homepage') }}"><span class="icon-home"></span> Inicio</a></li>
+
+              {% if app.user.username == 'pirotecnia' %}
+							<li class="{% if 'cliente' in app.request.attributes.get('_route') %}active{% endif %}">
+								<a href="{{ path('cliente') }}"><span class="icon-child"></span>Clientes</a>
+							</li>
+							<li class="{% if 'producto' in app.request.attributes.get('_route') %}productoactive{% endif %} productoverde">
+								<a href="{{ path('producto') }}"><span class="icon-path"></span> Productos</a>
+							</li>
+							<li class="{% if 'espectaculo' in app.request.attributes.get('_route') %}espectaculoactive{% endif %} espectaculored">
+								<a href="{{ path('espectaculo') }}"><span class="icon-fire"></span> Espetáculos</a>
+							</li>
+            {% else %}
+            <li class="{% if 'libro' in app.request.attributes.get('_route') %}libroactive{% endif %} librored">
+                <a href="{{ path('libro') }}"><span class="icon-book"></span> Libro Diario</a>
+              </li>
+              <li class="{% if 'informe_diario' in app.request.attributes.get('_route') %}informeactive{% endif %} informeturquesa">
+                <a href="{{ path('informe_diario') }}"><span class="icon-file"></span> Informe Diario</a>
+              </li>
+            <li class="{% if 'informe_mensual' in app.request.attributes.get('_route') %}mensualactive{% endif %} mensualoscuro">
+              <a href="{{ path('informe_mensual') }}"><span class="icon-file"></span> Informe Mensual</a>
+            </li>
+              {% endif %}
+
+						</ul>
+					</div>
+				</nav>
+			</header>
+				<section class="container" role="main">
+					    {% for type, flashMessages in app.session.flashbag.all() %}
+					        {% for flashMessage in flashMessages %}
+					        	<div class="alert alert-warning fade in {{ type }}">
+													<button data-dismiss="alert" class="close">×</button>
+													<h2><strong>{{ type }}</strong></h2>         		{{ flashMessage|trans({}, 'JordiLlonchCrudGeneratorBundle') }}
+												</div>
+					        {% endfor %}
+					    {% endfor %}
+
+			    {% block content %}{% endblock %}
+				</section>
+			<div id="push"></div>
+
+		</div>
+		<footer id="footer">
+			<div class="container">
+				<p>Pirotecnia Manchega, S.A. - <a href="http://www.pirotecniamanchega.com" target="_blank">www.pirotecniamanchega.com</a></p>
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+			</div>
+		</footer>
+{% endblock %}

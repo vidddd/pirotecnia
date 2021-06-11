@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Data blocks | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- jQuery Snippet Styles -->
+		<link rel='stylesheet' type='text/css' href='../css/plugins/jquery.snippet.css'>
+
+		<!-- CSS styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-blue.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+		<script src="../js/libs/modernizr.js"></script>
+		<script src="../js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});
+
+				// Tabs
+				$('.demoTabs a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+				
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-alt btn-inverse pull-right"><span class="awe-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Introduction</a>
+								<ul class="dropdown-menu">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li><a href="file-structure.html">File structure</a></li>
+									<li><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li class="active"><a href="data-blocks.html">Data blocks</a></li>
+								</ul>
+							</li>
+							<li><a href="navigation.html">Navigation</a></li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
+								<ul class="dropdown-menu">
+									<li><a href="components.html#tables">Tables</a></li>
+									<li><a href="components.html#forms">Forms</a></li>
+									<li><a href="components.html#icons">Icons</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript</a>
+								<ul class="dropdown-menu">
+									<li><a href="javascript.html#navigation">Navigation</a></li>
+									<li><a href="javascript.html#form-gallery">Form gallery</a></li>
+									<li><a href="javascript.html#todo-list">To-do list</a></li>
+								</ul>
+							</li>
+							<li><a href="plugins.html">Plugins</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Hero unit -->
+				<article class="hero-unit blue">
+					<h1><span class="icon-smiley-alt"></span> Data blocks</h1>
+					<p>Use standard Bootstrap grid classes with data-block cell to build your own layout. Each data block comes with optional components.</p>
+				</article>
+				<!-- /Hero unit -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<section>
+<pre class="html">
+&lt;article class="spanX data-block"&gt;
+	&lt;header&gt;
+		&lt;h2&gt;Headline&lt;/h2&gt;
+	&lt;/header&gt;
+	&lt;section&gt;
+		Content
+	&lt;/section&gt;
+	&lt;footer&gt;
+		Footer
+	&lt;/footer&gt;
+&lt;/article&gt;
+</pre>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Data block structure</h2>
+							<form class="header-search">
+								<input type="text" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]" data-items="4" data-provide="typeahead" placeholder="Search…">
+							</form>
+						</header>
+						<section>
+							<p>First grid layer is built with <code>.data-block</code> cells. Second one works inside of data blocks. You can remove <code>&lt;footer&gt;</code> and <code>&lt;header&gt;</code> if needed or turn whole block into more complex widget.</p>
+							<p>Each block header can be enchanted with buttons, dropdown, tabs, search bar or loeading notification. Use <code>.data-header-actions</code> or <code>.header-search</code> class for proper styling. See the examples on this page.</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Data block styles</h2>
+							<ul class="data-header-actions">
+								<li><span class="loading blue" title="Loading&hellip;">Loading&hellip;</span></li>
+							</ul>
+						</header>
+						<section>
+							<p>You can choose from 8 different colors for each data block. Simply add color class <code>.red</code> or other to change color of your data block.</p>
+							<p>Each data block comes with header, content section and footer which are also optional and removeable.</p>
+							<p>Check following blocks on the right side for example configuration.</p>
+							<img alt="Color samples" src="../img/sample_content/colors.png">
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span2 data-block">
+						<header>
+							<h2>Default</h2>
+						</header>
+						<section>
+							<p>This is default data-block style.</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span2 data-block red">
+						<header>
+							<h2>Red</h2>
+						</header>
+						<section>
+							<p>This data-block is using <code>.red</code> class</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span2 data-block purple">
+						<header>
+							<h2>Purple</h2>
+						</header>
+						<section>
+							This data-block is using <code>.purple</code> class.
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Data block widgets</h2>
+							<ul class="data-header-actions">
+								<li><a href="#">Calendar</a></li>
+							</ul>
+						</header>
+						<section>
+							<p>Use <code>.widget-block</code> class to turn data-block into a widget.</p>
+							<p>Follow the structure below so you can easily customize widget-block content.</p>
+<pre class="html">
+&lt;a class="spanX data-block widget-block"&gt;
+	&lt;section&gt;
+		&lt;span&gt;Icon&lt;/span&gt;
+		&lt;strong&gt;Text&lt;/strong&gt;
+	&lt;/section&gt;
+&lt;/a&gt;
+</pre>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<a class="span2 data-block widget-block" href="#">
+						<section>
+							<span class="icon-file-new-alt"></span>
+							<strong>Add product</strong>
+						</section>
+					</a>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<a class="span2 data-block widget-block" href="#">
+						<section>
+							<span class="icon-shopping-cart-sign"></span>
+							<strong>Orders</strong>
+						</section>
+					</a>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<a class="span2 data-block widget-block" href="#">
+						<section>
+							<span class="icon-globe-alt"></span>
+							<strong>Shipping</strong>
+						</section>
+					</a>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Data block plans</h2>
+						</header>
+						<section>
+							<p>Data blocks with <code>.plan-block</code> class applied allows you to create blocks with more specific information. Simply follow the structure below.</p>
+<pre class="html">
+&lt;article class="spanX data-block plan-block"&gt;
+	&lt;section&gt;
+		&lt;span&gt;Icon&lt;/span&gt;
+		&lt;h3&gt;Headline&lt;/h3&gt;
+		&lt;p&gt;Text&lt;/p&gt;
+		&lt;a class="btn"&gt;Button&lt;/a&gt;
+	&lt;/section&gt;
+&lt;/article&gt;
+</pre>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- /Data block -->
+					<article class="span3 data-block plan-block">
+						<section>
+							<span class="icon-group"></span>
+							<h3>Quisque mattis</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+							<a href="#" class="btn btn-alt btn-block btn-large btn-success">Subscribbe</a>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 data-block plan-block">
+						<section>
+							<span class="icon-fire"></span>
+							<h3>Nullam et purus</h3>
+							<p>Proin nulla nisl, elementum ut dignissim, mollis diam.</p>
+							<a href="#" class="btn btn-alt btn-block btn-large btn-success">App Store</a>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span3 data-block">
+						<header>
+							<h2>Accordion data block</h2>
+						</header>
+						<section>
+							<p>Nice floating accordion style can be achieved with <code>.accordion-block</code> class.</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 data-block accordion-block">
+						<div id="accordionName" class="accordion">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" href="#accordionTabOne" data-parent="#accordionName" data-toggle="collapse">First accordion tab</a>
+								</div>
+								<div id="accordionTabOne" class="accordion-body collapse in">
+									<div class="accordion-inner">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</div>
+								</div>
+							</div>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" href="#accordionTabTwo" data-parent="#accordionName" data-toggle="collapse">Second accordion tab</a>
+								</div>
+								<div id="accordionTabTwo" class="accordion-body collapse">
+									<div class="accordion-inner">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 data-block">
+						<header>
+							<h2>To-do data block</h2>
+						</header>
+						<section>
+							<p>When creating to-do list, do not forget to include <code>.todo-block</code> class for data block.</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 data-block todo-block gray">
+						<header>
+							<h2><span class="awe-edit"></span> Simple TODO list</h2>
+						</header>
+						<section>
+							<form>
+								<table class="table">
+									<tbody>
+										<tr class="done">
+											<td><input type="checkbox" value="done" checked=""></td>
+											<td>
+												<p>doItNow();</p>
+												<span>completed <time>Apr 12</time></span>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="done"></td>
+											<td>
+												<p><span class="label label-important">Important</span> meeting</p>
+												<span>due <time>Apr 12</time></span>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" value="done"></td>
+											<td>
+												<p>take out the trash</p>
+												<span>due <time>Apr 17</time></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- jQuery Snippet -->
+		<script src="../js/plugins/snippet/jquery.snippet.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			
+				$('pre.html').snippet('html',{style:"rand01"});
+			
+			});
+		</script>
+		
+		<!-- Block TODO list -->
+		<script>
+			$(document).ready(function() {
+				
+				$('.todo-block input[type="checkbox"]').click(function(){
+					$(this).closest('tr').toggleClass('done');
+				});
+				$('.todo-block input[type="checkbox"]:checked').closest('tr').addClass('done');
+				
+			});
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Invoice | Sangoma Bootstrap Admin Template</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-turquoise.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+
+		<script src="js/libs/modernizr.js"></script>
+		<script src="js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});	
+
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile -->
+				<div class="user-profile">
+					<figure>
+
+						<!-- User profile avatar -->
+						<img alt="John Pixel avatar" src="http://placekitten.com/60/60">
+
+						<!-- User profile info -->
+						<figcaption>
+							<strong><a href="#" class="">John Pixel</a></strong>
+							<ul>
+								<li><a href="#" title="Message inbox">inbox</a></li>
+								<li><a href="#" title="Account settings">settings</a></li>
+								<li><a href="#" title="Logout">logout</a></li>
+							</ul>
+						</figcaption>
+						<!-- /User profile info -->
+
+					</figure>
+				</div>
+				<!-- /User profile -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li><a href="index.html"><span class="icon-home"></span> Dashboard</a></li>
+							<li>
+								<a href="forms.html" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-tasks"></span> Forms &amp; Tables<span class="badge">6</span></a>
+								<ul class="dropdown-menu">
+									<li><a href="forms.html"><span class="icon-align-left"></span>Forms</a></li>
+									<li><a href="tables.html"><span class="icon-th-list"></span>Tables</a><span class="badge">23</span></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-asl"></span> Elements</a>
+								<ul class="dropdown-menu">
+									<li><a href="charts.html"><span class="icon-graph"></span> Charts</a></li>
+									<li><a href="gallery.html"><span class="icon-picture"></span> Gallery</a></li>
+									<li><a href="file-explorer.html"><span class="icon-inbox"></span> File explorer</a></li>
+									<li><a href="calendar.html"><span class="icon-calendar"></span> Calendar</a></li>
+									<li class="divider"></li>
+									<li><a href="ui-buttons.html"><span class="icon-cogs"></span> UI &amp; Buttons</a></li>
+									<li><a href="typo.html"><span class="icon-font"></span> Typography</a><span class="badge">7</span></li>
+									<li><a href="grid.html"><span class="icon-th"></span> Grid</a></li>
+									<li><a href="goodies.html"><span class="icon-heart"></span> Goodies</a></li>
+								</ul>
+							</li>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-file"></span> Pages</a>
+								<ul class="dropdown-menu">
+									<li><a href="eshop.html">Online store</a></li>
+									<li><a href="add-item.html">Add item / product</a></li>
+									<li class="active"><a href="invoice.html">Invoice</a></li>
+									<li><a href="user-profile.html">User profile</a></li>
+									<li><a href="401.html">Error 401</a></li>
+									<li><a href="403.html">Error 403</a></li>
+									<li><a href="404.html">Error 404</a></li>
+									<li><a href="500.html">Error 500</a></li>
+									<li><a href="503.html">Error 503</a></li>
+									<li><a href="login.html">Login page</a></li>
+								</ul>
+							</li>
+							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<header>
+							<h2>Invoice #1564654</h2>
+							<ul class="data-header-actions">
+								<li><a href="#">Add invoice</a></li>
+								<li><a href="#">Export</a></li>
+								<li><a href="#">Print</a></li>
+							</ul>
+						</header>
+						<section>
+
+							<!-- Grid row -->
+							<div class="row-fluid">
+								<div class="span8">
+									<dl class="dl-horizontal">
+										<dt>Invoice Number:</dt>
+										<dd>#1564654</dd>
+										<dt>Invoice Date:</dt>
+										<dd>2013-02-25</dd>
+										<dt>Due Date:</dt>
+										<dd>2013-03-25</dd>
+										<dt>Invoice Status:</dt>
+										<dd><span class="label label-success">Completed</span> <small>2013-02-26 (9:28)</small></dd>
+									</dl>
+								</div>
+								<div class="span4">
+									<div class="well">
+										<h4 class="no-margin">Billing &amp; Delivery address</h4>
+										<dl class="no-bottom-margin">
+											<dt>Name:</dt>
+											<dd>Bob Pixel</dd>
+											<dt>Address:</dt>
+											<dd>1156 Princess street</dd>
+											<dd>Santa Cruz, CA 95064</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<!-- /Grid row -->
+
+							<table class="table table-striped table-bordered table-condensed table-hover no-margin">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Item</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Tax</th>
+										<th>Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Product</td>
+										<td>$100</td>
+										<td>1</td>
+										<td>20%</td>
+										<td>$120</td>
+									</tr>
+
+									<tr>
+										<td colspan="5"><strong>Subtotal:</strong></td>
+										<td><strong>$840</strong></td>
+									</tr>
+									<tr>
+										<td colspan="5"><strong>Shipping:</strong></td>
+										<td><strong>$8</strong></td>
+									</tr>
+									<tr>
+										<td colspan="5"><strong>Total:</strong></td>
+										<td><strong>$848</strong></td>
+									</tr>
+
+								</tbody>
+							</table>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		
+	</body>
+</html>

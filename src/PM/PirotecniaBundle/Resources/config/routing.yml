@@ -1,0 +1,15 @@
+pm_pirotecnia_homepage:
+    pattern:  /pirotecnia
+    defaults: { _controller: PMPirotecniaBundle:Default:index }
+
+PMPirotecniaBundle_cliente:
+    resource: "@PMPirotecniaBundle/Resources/config/routing/cliente.yml"
+    prefix:   /cliente
+
+PMPirotecniaBundle_producto:
+    resource: "@PMPirotecniaBundle/Resources/config/routing/producto.yml"
+    prefix:   /producto
+
+PMPirotecniaBundle_espectaculo:
+    resource: "@PMPirotecniaBundle/Resources/config/routing/espectaculo.yml"
+    prefix:   /espectaculo

@@ -1,0 +1,15 @@
+parameters:
+#    pm_libro.example.class: PM\LibroBundle\Example
+
+services:
+#    pm_libro.example:
+#        class: %pm_libro.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    libro.print_diario:
+        class: PM\LibroBundle\Printer\PrintInformeDiarioFPDF
+        arguments:
+            em: @doctrine
+    libro.print_mensual:
+        class: PM\LibroBundle\Printer\PrintInformeMensualFPDF
+        arguments:
+            em: @doctrine

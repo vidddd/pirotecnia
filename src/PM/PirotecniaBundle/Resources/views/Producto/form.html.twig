@@ -1,0 +1,38 @@
+	<div class="modal-body">
+							<fieldset>
+							  <div class="control-group">
+									{{ form_label(form.nombre, null, { 'label': 'Nombre', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.nombre, { 'attr':{'class': 'span4'}}) }}
+									</div>
+								</div> 
+				 				<div class="control-group">
+									{{ form_label(form.numero, null, { 'label': 'Numero de Catalogación', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.numero, { 'attr':{'class': 'span2'}}) }}
+									</div>
+								</div> 
+								<div class="control-group">
+									{{ form_label(form.riesgo, null, { 'label': 'División de Riesgo', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										{{ form_widget(form.riesgo, { 'attr':{'class': 'input-small'}}) }}
+									</div>
+								</div> 
+							  <div class="control-group">
+									{{ form_label(form.peso, null, { 'label': 'Peso', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										<div class="input-prepend input-append">{{ form_widget(form.peso, { 'attr':{'class': 'input-small numeric'}}) }}<span class="add-on">Grs</span></div>
+									</div>
+								</div> 
+									  <div class="control-group">
+									{{ form_label(form.disabled, null, { 'label': 'Deshabilitar ?', 'label_attr': {'class': 'control-label'} }) }}
+									<div class="controls">
+										<div class="input-prepend input-append">{{ form_widget(form.disabled, { 'attr':{'class': ''}}) }}</div>
+									</div>
+								</div> 
+								</fieldset>	<div class="clearfix"></div>
+							</div>
+								<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+								 <button style="float:right;" type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar</button> 
+								</div>
+					

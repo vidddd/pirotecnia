@@ -1,0 +1,7 @@
+parameters:
+#    pm_inicio.example.class: PM\InicioBundle\Example
+
+services:
+#    pm_inicio.example:
+#        class: %pm_inicio.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,15 @@
+parameters:
+#    pm_pirotecnia.example.class: PM\PirotecniaBundle\Example
+
+services:
+#    pm_pirotecnia.example:
+#        class: %pm_pirotecnia.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    pirotecnia.print_caja:
+        class: PM\PirotecniaBundle\Printer\PrintCajaFPDF
+        arguments:
+            em: @doctrine
+    pirotecnia.print_espectaculo:
+        class: PM\PirotecniaBundle\Printer\PrintEspectaculoFPDF
+        arguments:
+            em: @doctrine

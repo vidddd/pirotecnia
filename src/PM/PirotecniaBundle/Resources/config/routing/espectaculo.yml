@@ -1,0 +1,56 @@
+espectaculo:
+    pattern:  /
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:index" }
+
+espectaculo_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:show" }
+
+espectaculo_new:
+    pattern:  /new
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:new" }
+
+espectaculo_create:
+    pattern:  /create
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:create" }
+    requirements: { _method: post }
+
+espectaculo_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:edit" }
+
+espectaculo_print:
+    pattern:  /{id}/print
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:print" }
+
+espectaculo_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:update" }
+    requirements: { _method: post|put }
+
+espectaculo_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:delete" }
+ 
+espectaculo_anadir_caja:
+    pattern:  /{id}/anadirCaja
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:anadirCaja" }
+
+espectaculo_caja_delete:
+    pattern:  /{id}/{espectaculoid}/delete
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:deleteCaja" }
+
+espectaculo_caja_print:
+    pattern:  /{id}/{espectaculoid}/{numcaja}/print
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:printCaja" }
+  
+espectaculo_caja_edit:
+    pattern:  /{id}/{espectaculoid}/editCaja
+    defaults: { _controller: "PMPirotecniaBundle:Espectaculo:editCaja" }
+    
+get_peso_producto:
+    pattern:  /getpesoproducto
+    defaults: { _controller: "PMPirotecniaBundle:Producto:getPeso", _format: json }
+    requirements:
+        _format: (xml|json)
+        _method:  POST

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>HTML structure | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Snippet Styles -->
+		<link rel='stylesheet' type='text/css' href='../css/plugins/jquery.snippet.css'>
+
+		<!-- CSS styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-blue.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+		<script src="../js/libs/modernizr.js"></script>
+		<script src="../js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-alt btn-inverse pull-right"><span class="awe-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Introduction</a>
+								<ul class="dropdown-menu">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li><a href="file-structure.html">File structure</a></li>
+									<li class="active"><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li><a href="data-blocks.html">Data blocks</a></li>
+								</ul>
+							</li>
+							<li><a href="navigation.html">Navigation</a></li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
+								<ul class="dropdown-menu">
+									<li><a href="components.html#tables">Tables</a></li>
+									<li><a href="components.html#forms">Forms</a></li>
+									<li><a href="components.html#icons">Icons</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript</a>
+								<ul class="dropdown-menu">
+									<li><a href="javascript.html#navigation">Navigation</a></li>
+									<li><a href="javascript.html#form-gallery">Form gallery</a></li>
+									<li><a href="javascript.html#todo-list">To-do list</a></li>
+								</ul>
+							</li>
+							<li><a href="plugins.html">Plugins</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Hero unit -->
+				<article class="hero-unit blue">
+					<h1><span class="icon-pencil-alt"></span> HTML structure</h1>
+					<p>Sangoma template is a fixed layout container with full 12col Bootstrap grid.</P>
+					<p>The best way how to get familiar with each element is to take a look at code itself. Every party is well documented and with combination with origianl Bootstrap documentation you should not get lost. But if it happens and you don’t know what to do feel free to contact us.</p>
+				</article>
+				<!-- /Hero unit -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<section>
+
+<pre class="html">
+&lt;div id="wrapper"&gt;
+
+	&lt;!-- Main page header --&gt;
+	&lt;header id="header" class="container"&gt;
+
+		&lt;!-- Main navigation --&gt;
+		&lt;nav class="main-navigation"&gt;
+
+			&lt;!-- User profile --&gt;
+			&lt;div class="user-profile"&gt;
+
+				...
+
+			&lt;/div&gt;
+
+			&lt;!-- Navigation  --&gt;
+			&lt;div class="nav-collapse collapse" role="navigation"&gt;
+
+				...
+
+			&lt;/div&gt;
+
+		&lt;/nav&gt;
+
+		&lt;!-- Main page logo --&gt;
+		&lt;h1&gt;&lt;a href="#" class="brand"&gt;Logo&lt;/a&gt;&lt;/h1&gt;
+
+		&lt;p&gt;&lt;!-- page headline --&gt;&lt;/p&gt;
+
+	&lt;/header&gt;
+	&lt;!-- /Main page header --&gt;
+
+	&lt;!-- Main page container --&gt;
+	&lt;section class="container" role="main"&gt;
+
+		&lt;!-- Page header --&gt;
+		&lt;article class="page-header"&gt;
+			...
+		&lt;/article&gt;
+
+		&lt;!-- Grid row --&gt;
+		&lt;div class="row"&gt;
+
+			&lt;!-- Data block --&gt;
+			&lt;article class="spanX data-block"&gt;
+				&lt;header&gt;
+					...
+				&lt;/header&gt;
+				&lt;section&gt;
+					...
+				&lt;/section&gt;
+				&lt;footer&gt;
+					...
+				&lt;/footer&gt;
+			&lt;/article&gt;
+
+		&lt;/div&gt;
+
+	&lt;/section&gt;
+	&lt;!-- /Main page container --&gt;
+
+	&lt;!-- Sticky footer push --&gt;
+	&lt;div id="push"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- Full height wrapper --&gt;
+
+&lt;!-- Main page footer --&gt;
+&lt;footer id="footer" class="container"&gt;
+	...
+&lt;/footer&gt;
+</pre>
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- jQuery Snippet -->
+		<script src="../js/plugins/snippet/jquery.snippet.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			
+				$('pre.html').snippet('html',{style:"rand01"});
+			
+			});
+		</script>
+		
+	</body>
+</html>

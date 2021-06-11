@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Data visualization | Sangoma Bootstrap Admin Template</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery Visualize Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/jquery.visualize.css'>
+
+		<!-- Styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-dark.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+
+		<script src="js/libs/modernizr.js"></script>
+		<script src="js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});	
+
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile -->
+				<div class="user-profile">
+					<figure>
+
+						<!-- User profile avatar -->
+						<img alt="John Pixel avatar" src="http://placekitten.com/60/60">
+
+						<!-- User profile info -->
+						<figcaption>
+							<strong><a href="#" class="">John Pixel</a></strong>
+							<ul>
+								<li><a href="#" title="Message inbox">inbox</a></li>
+								<li><a href="#" title="Account settings">settings</a></li>
+								<li><a href="#" title="Logout">logout</a></li>
+							</ul>
+						</figcaption>
+						<!-- /User profile info -->
+
+					</figure>
+				</div>
+				<!-- /User profile -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li><a href="index.html"><span class="icon-home"></span> Dashboard</a></li>
+							<li>
+								<a href="forms.html" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-tasks"></span> Forms &amp; Tables<span class="badge">6</span></a>
+								<ul class="dropdown-menu">
+									<li><a href="forms.html"><span class="icon-align-left"></span>Forms</a></li>
+									<li><a href="tables.html"><span class="icon-th-list"></span>Tables</a><span class="badge">23</span></li>
+								</ul>
+							</li>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-asl"></span> Elements</a>
+								<ul class="dropdown-menu">
+									<li class="active"><a href="charts.html"><span class="icon-graph"></span> Charts</a></li>
+									<li><a href="gallery.html"><span class="icon-picture"></span> Gallery</a></li>
+									<li><a href="file-explorer.html"><span class="icon-inbox"></span> File explorer</a></li>
+									<li><a href="calendar.html"><span class="icon-calendar"></span> Calendar</a></li>
+									<li class="divider"></li>
+									<li><a href="ui-buttons.html"><span class="icon-cogs"></span> UI &amp; Buttons</a></li>
+									<li><a href="typo.html"><span class="icon-font"></span> Typography</a><span class="badge">7</span></li>
+									<li><a href="grid.html"><span class="icon-th"></span> Grid</a></li>
+									<li><a href="goodies.html"><span class="icon-heart"></span> Goodies</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-file"></span> Pages</a>
+								<ul class="dropdown-menu">
+									<li><a href="eshop.html">Online store</a></li>
+									<li><a href="add-item.html">Add item / product</a></li>
+									<li><a href="invoice.html">Invoice</a></li>
+									<li><a href="user-profile.html">User profile</a></li>
+									<li><a href="401.html">Error 401</a></li>
+									<li><a href="403.html">Error 403</a></li>
+									<li><a href="404.html">Error 404</a></li>
+									<li><a href="500.html">Error 500</a></li>
+									<li><a href="503.html">Error 503</a></li>
+									<li><a href="login.html">Login page</a></li>
+								</ul>
+							</li>
+							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span4 data-block">
+						<header>
+							<h2><span class="icon-check"></span> My TODO list</h2>
+						</header>
+						<section>
+
+							<table data-chart="pie" class="visualize-chart">
+								<caption>Employee Sales by Department</caption>
+								<thead>
+									<tr>
+										<td></td>
+										<th scope="col">food</th>
+										<th scope="col">auto</th>
+										<th scope="col">household</th>
+										<th scope="col">furniture</th>
+										<th scope="col">kitchen</th>
+										<th scope="col">bath</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Mary</th>
+										<td>90</td>
+										<td>160</td>
+										<td>40</td>
+										<td>120</td>
+										<td>30</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<th scope="row">Tom</th>
+										<td>30</td>
+										<td>40</td>
+										<td>30</td>
+										<td>45</td>
+										<td>35</td>
+										<td>49</td>
+									</tr>
+									<tr>
+										<th scope="row">Dave</th>
+										<td>30</td>
+										<td>20</td>
+										<td>40</td>
+										<td>145</td>
+										<td>135</td>
+										<td>49</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+					<!-- Data block -->
+					<article class="span4 data-block">
+						<header>
+							<h2><span class="icon-check"></span> My TODO list</h2>
+						</header>
+						<section>
+
+							<table data-chart="bar" class="visualize-chart">
+								<caption>Employee Sales by Department</caption>
+								<thead>
+									<tr>
+										<td></td>
+										<th scope="col">food</th>
+										<th scope="col">auto</th>
+										<th scope="col">household</th>
+										<th scope="col">furniture</th>
+										<th scope="col">kitchen</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Mary</th>
+										<td>90</td>
+										<td>160</td>
+										<td>40</td>
+										<td>120</td>
+										<td>30</td>
+									</tr>
+									<tr>
+										<th scope="row">Tom</th>
+										<td>30</td>
+										<td>40</td>
+										<td>30</td>
+										<td>45</td>
+										<td>35</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+					<!-- Data block -->
+					<article class="span4 data-block">
+						<header>
+							<h2><span class="icon-check"></span> My TODO list</h2>
+						</header>
+						<section>
+
+							<table data-chart="area" class="visualize-chart">
+								<caption>Employee Sales by Department</caption>
+								<thead>
+									<tr>
+										<td></td>
+										<th scope="col">food</th>
+										<th scope="col">auto</th>
+										<th scope="col">household</th>
+										<th scope="col">furniture</th>
+										<th scope="col">kitchen</th>
+										<th scope="col">bath</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Mary</th>
+										<td>190</td>
+										<td>160</td>
+										<td>40</td>
+										<td>120</td>
+										<td>30</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<th scope="row">Tom</th>
+										<td>3</td>
+										<td>40</td>
+										<td>30</td>
+										<td>45</td>
+										<td>35</td>
+										<td>49</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 red data-block">
+						<header>
+							<h2><span class="icon-check"></span> My TODO list</h2>
+						</header>
+						<section>
+							
+							<table data-chart="line" class="visualize-chart">
+								<caption>Employee Sales by Department</caption>
+								<thead>
+									<tr>
+										<td></td>
+										<th scope="col">food</th>
+										<th scope="col">auto</th>
+										<th scope="col">household</th>
+										<th scope="col">furniture</th>
+										<th scope="col">kitchen</th>
+										<th scope="col">bath</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Mary</th>
+										<td>190</td>
+										<td>160</td>
+										<td>40</td>
+										<td>120</td>
+										<td>30</td>
+										<td>70</td>
+									</tr>
+									<tr>
+										<th scope="row">Tom</th>
+										<td>3</td>
+										<td>40</td>
+										<td>30</td>
+										<td>45</td>
+										<td>35</td>
+										<td>49</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>jQuery Visualize plugin for accessible charts and graphs that uses JavaScript to scrape data from an HTML table and generate bar, line, area, and pie chart visualizations using the HTML5 canvas element. This technique provides a simple way to generate charts, but more importantly, because it bases the chart on data already in the page in an HTML table element, it is accessible to people who browse the web with a screen reader or other assistive technology, or with browsers that don't fully support JavaScript or HTML5 Canvas.</p>
+
+						</section>
+						<footer>
+							<p><span class="icon-flag"></span> Ut id risus sapien, ac venenatis arcu. </p>
+						</footer>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span4 gray data-block">
+						<header>
+							<h2>Various graph types</h2>
+						</header>
+						<section>
+							<div id="demo-2" class="flot"></div>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span4 dark data-block">
+						<header>
+							<h2>Pie chart</h2>
+						</header>
+						<section>
+							<div id="demo-3" class="flot"></div>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span4 orange data-block">
+						<header>
+							<h2>Tooltips and mouse tracking</h2>
+						</header>
+						<section>
+							<div id="demo-4" class="flot"></div>
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 gray data-block">
+						<header>
+							<h2>jQuery Flot Charts</h2>
+						</header>
+						<section>
+
+							<p>Flot is a pure Javascript plotting library for jQuery. It produces graphical plots of arbitrary datasets on-the-fly client-side. The focus is on simple usage (all settings are optional), attractive looks and interactive features like zooming and mouse tracking. The plugin works with Internet Explorer 6+, Firefox 2.x+, Safari 3.0+, Opera 9.5+ and Konqueror 4.x+ with the HTML canvas tag (the excanvas Javascript emulation helper is used for IE < 9).</p>
+							<p>More Flot Chart <a href="http://people.iola.dk/olau/flot/examples/" target="_blank">examples</a>.</p>
+							<div id="demo-1" class="flot"></div>
+							
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- jQuery Visualize -->
+		<!--[if lte IE 8]>
+			<script language="javascript" type="text/javascript" src="js/plugins/visualize/excanvas.js"></script>
+		<![endif]-->
+		<script src="js/plugins/visualize/jquery.visualize.min.js"></script>
+		<script src="js/plugins/visualize/jquery.visualize.tooltip.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+			
+				// Draw graph via function
+				function responsiveVisualize() {
+					$('.visualize-chart').each(function() {
+						var chartType = ''; // Set chart type
+						var chartWidth = $(this).parent().width()*0.9; // Set chart width to 90% of its parent
+						
+						if (chartWidth < 350) {
+							var chartHeight = chartWidth;
+						} else {
+							var chartHeight = chartWidth*0.4;
+						}
+						
+						if ($(this).attr('data-chart')) { // If exists chart-chart attribute
+							chartType = $(this).attr('data-chart'); // Get chart type from data-chart attribute
+						} else {
+							chartType = 'area'; // If data-chart attribute is not set, use 'area' type as default. Options: 'bar', 'area', 'pie', 'line'
+						}
+						
+						if (chartType == 'line' || chartType == 'pie') {
+							$(this).hide().visualize({
+								type: chartType,
+								width: chartWidth,
+								height: chartHeight,
+								colors: ['#c0392b','#2980b9','#27ae60','#8e44ad','#16a085','#d35400','#2c3e50','#7f8c8d'],
+								lineDots: 'double',
+								interaction: true,
+								multiHover: 5,
+								tooltip: true,
+								tooltiphtml: function(data) {
+									var html ='';
+									for(var i=0; i<data.point.length; i++){
+										html += '<p class="tooltip chart_tooltip"><div class="tooltip-inner"><strong>'+data.point[i].value+'</strong> '+data.point[i].yLabels[0]+'</div></p>';
+									}
+									return html;
+								}
+							});
+						} else {
+							$(this).hide().visualize({
+								type: chartType,
+								width: chartWidth,
+								height: chartHeight,
+								colors: ['#c0392b','#2980b9','#27ae60','#8e44ad','#16a085','#d35400','#2c3e50','#7f8c8d'],
+							});
+						}
+					});
+				}
+
+				$(window).on("resize load", function(){
+					$('.visualize').remove();
+					responsiveVisualize();
+				});
+
+			});
+		</script>
+		
+		<!-- jQuery Flot Charts -->
+		<!--[if lte IE 8]>
+			<script language="javascript" type="text/javascript" src="js/plugins/flot/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="js/plugins/flot/jquery.flot.min.js"></script>
+		<script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
+		<script src="js/plugins/flot/jquery.flot.resize.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+			
+				// Demo #2
+				var d1 = [];
+				for (var i = 0; i < 14; i += 0.5)
+					d1.push([i, Math.sin(i)]);
+				
+				var d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
+				
+				var d3 = [];
+				for (var i = 0; i < 14; i += 0.5)
+					d3.push([i, Math.cos(i)]);
+				
+				var d4 = [];
+				for (var i = 0; i < 14; i += 0.1)
+					d4.push([i, Math.sqrt(i * 10)]);
+				
+				var d5 = [];
+				for (var i = 0; i < 14; i += 0.5)
+					d5.push([i, Math.sqrt(i)]);
+				
+				var d6 = [];
+				for (var i = 0; i < 14; i += 0.5 + Math.random())
+					d6.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
+						
+				$.plot($("#demo-2"), [
+					{
+						data: d1,
+						lines: { show: true, fill: true }
+					},
+					{
+						data: d2,
+						bars: { show: true }
+					},
+						{
+					data: d3,
+						points: { show: true }
+					},
+					{
+						data: d4,
+						lines: { show: true }
+					},
+					{
+						data: d5,
+						lines: { show: true },
+						points: { show: true }
+					},
+					{
+						data: d6,
+						lines: { show: true, steps: true }
+					}
+				], {
+					grid: { backgroundColor: 'transparent', borderColor: 'transparent' }
+				});
+				
+				// Demo #3
+				var data = [];
+				var series = Math.floor(Math.random()*6)+3;
+				for( var i = 0; i<series; i++){
+					data[i] = { label: (i+1)+"000 &euro;", data: Math.floor(Math.random()*100)+1 }
+				}
+				
+				$.plot($("#demo-3"), data, {
+					series: {
+						pie: {
+							innerRadius: 0.5,
+							show: true
+						},
+						grid: { backgroundColor: 'transparent' }
+					}
+				});
+				
+				// Demo #4
+				var sin = [], cos = [];
+				for (var i = 0; i < 14; i += 0.5) {
+					sin.push([i, Math.sin(i)]);
+					cos.push([i, Math.cos(i)]);
+				}
+				
+				var plot = $.plot($("#demo-4"),
+					[ { data: sin, label: "sin(x)"}, { data: cos, label: "cos(x)" } ], {
+						series: {
+							lines: { show: true },
+							points: { show: true }
+						},
+						grid: { hoverable: true, clickable: true, backgroundColor: 'transparent', borderColor: 'transparent' },
+						yaxis: { min: -1.2, max: 1.2 }
+					});
+				
+				function showTooltip(x, y, contents) {
+					$('<div id="tooltip"><div class="tooltip-inner">' + contents + '</div></div>').css( {
+						position: 'absolute',
+						display: 'none',
+						top: y + 10,
+						left: x + 10
+					}).appendTo("body").fadeIn(200);
+				}
+				
+				var previousPoint = null;
+				$("#demo-4").bind("plothover", function (event, pos, item) {
+					$("#x").text(pos.x.toFixed(2));
+					$("#y").text(pos.y.toFixed(2));
+				
+						if (item) {
+							if (previousPoint != item.dataIndex) {
+								previousPoint = item.dataIndex;
+				
+								$("#tooltip").remove();
+								var x = item.datapoint[0].toFixed(2),
+									y = item.datapoint[1].toFixed(2);
+				
+								showTooltip(item.pageX, item.pageY,
+								item.series.label + " of " + x + " = " + y);
+							}
+						} else {
+							$("#tooltip").remove();
+							previousPoint = null;
+						}
+				});
+				
+				$("#demo-4").bind("plotclick", function (event, pos, item) {
+					if (item) {
+						$("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+						plot.highlight(item.series, item.datapoint);
+					}
+				});
+				
+				// Demo #1
+				// we use an inline data source in the example, usually data would be fetched from a server
+				var data = [], totalPoints = 300;
+				function getRandomData() {
+					if (data.length > 0)
+						data = data.slice(1);
+				
+					// do a random walk
+					while (data.length < totalPoints) {
+						var prev = data.length > 0 ? data[data.length - 1] : 50;
+						var y = prev + Math.random() * 10 - 5;
+						if (y < 0)
+							y = 0;
+						if (y > 100)
+							y = 100;
+						data.push(y);
+					}
+				
+					// zip the generated y values with the x values
+					var res = [];
+					for (var i = 0; i < data.length; ++i)
+						res.push([i, data[i]])
+					return res;
+				}
+				
+				// setup control widget
+				var updateInterval = 30;
+				$("#updateInterval").val(updateInterval).change(function () {
+					var v = $(this).val();
+					if (v && !isNaN(+v)) {
+						updateInterval = +v;
+					if (updateInterval < 1)
+						updateInterval = 1;
+					if (updateInterval > 2000)
+						updateInterval = 2000;
+					$(this).val("" + updateInterval);
+					}
+				});
+				
+				// setup plot
+				var options = {
+					series: {
+						shadowSize: 0,
+						color: '#4986E7',
+						lines: {
+							fill: true
+						}
+					}, // drawing is faster without shadows
+					yaxis: { min: 0, max: 100 },
+					xaxis: { show: false },
+					grid: { backgroundColor: '#ffffff', borderColor: 'transparent' },
+				};
+				var plot = $.plot($("#demo-1"), [ getRandomData() ], options);
+				
+				function update() {
+					plot.setData([ getRandomData() ]);
+					// since the axes don't change, we don't need to call plot.setupGrid()
+					plot.draw();
+					setTimeout(update, updateInterval);
+				}
+				
+				update();
+			
+			});
+		</script>
+		
+	</body>
+</html>

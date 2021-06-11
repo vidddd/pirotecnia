@@ -1,0 +1,3 @@
+pm_inicio_homepage:
+    pattern:  /
+    defaults: { _controller: PMInicioBundle:Default:index }

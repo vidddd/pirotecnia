@@ -1,0 +1,135 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $('.show3').on('click', function(event){
+        $('#modal3').load(
+            $(this).attr('href'),
+            function(response, status, xhr) {
+                if (status === 'error') {
+                    //console.log('got here');
+                    $('#modal3').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');
+                }
+                return this;
+            }
+        ); event.preventDefault();
+    });
+});
+-->
+</script><div id="espectaculo">
+		<section class="container">
+				<div class="row">
+					<article class="span12 red data-block">
+						<header><h2>B&uacute;squeda de Espect&aacute;culos</h2></header>
+						<section>
+						<div class="span10">
+						<div class="row">	<form class="form-horizontal no-margin" action="{{ path('espectaculo') }}" method="POST" {{ form_enctype(filterForm) }}>
+						<span class="span5">
+							<div id="horizontal">
+									<div class="control-group">
+											{{ form_label(filterForm.fecha, '', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.fecha, { 'attr': {'class': 'input-small datepicker2'}}) }}</div>
+										</div>
+							</div>
+							</span>
+							<span class="span5">
+								<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+											{{ form_label(filterForm.hora, 'Hora', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.hora, { 'attr': {'class': ''}}) }}</div>
+										</div>
+							</div>
+							</span>
+							<span class="span10" style="margin-top:20px;">
+									<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+											{{ form_label(filterForm.cliente, 'Cliente', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.cliente, { 'attr': {'class': 'span5'}}) }}</div>
+										</div>
+							</div>
+							</span>
+						</div>
+						<div class="row">
+										<div style="width:300px; float:left;" class="form-actions form-right">
+										 <a class="btn btn-alt btn-danger" data-toggle="modal" href="#modalClientef"><span class="icon-plus"></span>Nuevo Espect&aacute;culo</a>
+										<!-- <a class="btn btn-alt btn-danger" href="{{ path('espectaculo_new') }}"><span class="icon-plus"></span>Nuevo Espect&aacute;culo</a> -->
+
+										</div>
+										<div style="float:right;" class="form-actions form-left">
+											<button class="btn btn-alt btn-danger" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+											<button class="btn btn-alt btn-danger" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+										</div>
+							</div></div>{{  form_errors(filterForm) }}
+						</section> {{ form_widget(filterForm._token) }}</form>
+					</article>
+				</div>
+				<div class="row">
+					<article class="span12 data-block">
+						<section>
+							<table class="table table-striped table-bordered table-hover table-media">
+								<thead>
+									<tr>
+						                <th>Id</th>
+						                <th width="280">Cliente</th>
+						                <th>Descripci&oacute;n</th>
+						                <th width="120">Fecha</th>
+						                <th width="100">Hora</th>
+						                <th width="150">Operaciones</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+							        {% for entity in entities %}
+							            <tr>
+							                <td><a href="#clienteModal{{ entity.id }}" data-toggle="modal">{{ entity.id }}</a></td>
+							                <td>{{ entity.cliente }}</td>
+							                <td>{{ entity.descripcion|length > 80 ? entity.descripcion|slice(0, 80) ~ '...' : entity.descripcion }}</td>
+							                <td>{{ entity.fecha|date('d.m.Y') }}</td>
+							                <td>{{ entity.hora|date('H:i') }}</td>
+							                <td>
+							            		<div class="btn-group">
+													<a class="btn btn-small show3" href="{{ path('espectaculo_show', { 'id': entity.id }) }}" data-toggle="modal" data-target="#espectaculoModalshow"><span class="icon-eye-open"></span></a>
+															<div class="modal modalEspectaculoshow fade hide in modal-overflow" id="espectaculoModalshow">
+																<div class="modal-body3" id="modal3"></div>
+															</div>
+													<a title="Editar Espectáculo" class="btn btn-small edit3" href="{{ path('espectaculo_edit', { 'id': entity.id }) }}"><span class="icon-pencil"></span></a>
+
+													<a title="Eliminar Espectáculo" onclick="return confirm('Desea eliminar del Espectáculo y todos sus datos? Esta acción no se puede deshacer');" href="{{ path('espectaculo_delete', { 'id': entity.id }) }}" class="btn btn-small"><span class="icon-trash"></span></a>
+							        				<a title="Imprimir Espectaculo" target="_blank" href="{{ path('espectaculo_print', { 'id': entity.id }) }}" class="btn btn-small"><span class="icon-print"></span></a>
+							        			</div>
+							                </td>
+							            </tr>
+							        {% endfor %}
+							   </tbody>
+						</table>
+		<div class="pagination pagination-right">{{ pagerHtml|raw }}</div>
+					 <form id="formmostrar" name="formmostrar" method="post" action="{{ path('espectaculo') }}">
+						    <div class="dataTables_length"><label>Mostrar
+						    	<select name="cuantos" id="cuantos" onchange="this.form.submit()" class="input-small">
+						        {% for item in cuantos %}
+						                <option value="{{ item }}" {% if item == entradas %} selected="selected" {% endif %}>{{ item }}</option>
+						        {% endfor %}
+						        </ul>
+						    	</select></label>
+						    </div>
+						    </form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+			</section>
+			<div class="modal modalEspectaculof fade hide" id="modalClientef">
+			<form name="clientef" id="clientef" class="form-horizontal no-margin" action="{{ path('espectaculo_create') }}" method="post"  {{  form_enctype(form) }}>
+						<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Nuevo Espect&aacute;culo</h3><hr /></div>
+							<div class="modal-body"><fieldset>
+							 {% include 'PMPirotecniaBundle:Espectaculo:form.html.twig' with { 'form' : form } %}
+							</fieldset>	</div>
+								<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+									<button style="float:right;" type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar</button>
+								</div>
+								    <div style="display:block;">{{  form_errors(form) }} </div>
+							{{  form_widget(form._token) }}</form>
+			</div></div>
+ {% endblock %}

@@ -1,0 +1,165 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block content %}
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+    $('.edit3').on('click', function(){
+        $('#utility_body').load(
+            $(this).attr('href'),
+            function(response, status, xhr) {
+                if (status === 'error') {
+                    //console.log('got here');
+                    $('#utility_body').html('<h2>Oh boy</h2><p>Error:' + xhr.status + ' ' + xhr.statusText+ '</p>');
+                }
+                return this;
+            }
+        );
+    });
+});
+-->
+</script>
+<div id="espectaculo">
+		<section class="container">
+				<div class="row">
+					<article class="span12 red data-block">
+						<header><h2>B&uacute;squeda de Entradas de Diario</h2></header>
+						<section>
+						<div class="span10">
+            <div class="row">	<form class="form-horizontal no-margin" action="{{ path('libro') }}" method="POST" {{ form_enctype(filterForm) }}>
+            <span class="span5">
+              <div id="horizontal">
+                  <div class="control-group">
+                      {{ form_label(filterForm.fecha, '', { 'label_attr': {'class': 'control-label'}}) }}
+                      <div class="controls">{{ form_widget(filterForm.fecha, { 'attr': {'class': 'input-small datepicker2'}}) }}</div>
+                    </div>
+              </div>
+              </span>
+              <span class="span5">
+                <div id="horizontal" class="form-horizontal">
+                    <div class="control-group">
+                      {{ form_label(filterForm.cartaporte, 'Carta Porte', { 'label_attr': {'class': 'control-label'}}) }}
+                      <div class="controls">{{ form_widget(filterForm.cartaporte, { 'attr': {'class': ''}}) }}</div>
+                    </div>
+              </div>
+              </span>
+              <span class="span5" style="margin-top:20px;">
+                  <div id="horizontal" class="form-horizontal">
+                    <div class="control-group">
+                      {{ form_label(filterForm.procedenciad, 'Procedencia o Destino', { 'label_attr': {'class': 'control-label'}}) }}
+                      <div class="controls">{{ form_widget(filterForm.procedenciad, { 'attr': {'class': 'span4'}}) }}</div>
+                    </div>
+              </div>
+              </span>
+              <span class="span5" style="margin-top:10px;">
+                  <div id="horizontal" class="form-horizontal">
+                    <div class="control-group">
+                      {{ form_label(filterForm.clase, 'Clase', { 'label_attr': {'class': 'control-label'}}) }}
+                      <div class="controls">{{ form_widget(filterForm.clase, { 'attr': {'class': 'span2'}}) }}</div>
+                    </div>
+              </div>
+              </span>
+              </div>
+              <div class="row">
+                <span class="span5" style="margin-top:10px;">
+                    <div id="horizontal" class="form-horizontal">
+                      <div class="control-group">
+                        {{ form_label(filterForm.producto, 'Tipo Producto', { 'label_attr': {'class': 'control-label'}}) }}
+                        <div class="controls">{{ form_widget(filterForm.producto, { 'attr': {'class': 'span2'}}) }}</div>
+                      </div>
+                </div>
+                </span>
+                <span class="span5" style="margin-top:10px;">
+                    <div id="horizontal" class="form-horizontal">
+                      <div class="control-group">
+                    </div>
+                        </div>
+                </span>
+
+						</div>
+						<div class="row">
+										<div style="width:300px; float:left;" class="form-actions form-right">
+										 <a class="btn btn-alt btn-danger" data-toggle="modal" href="#modalClientef"><span class="icon-plus"></span>Nuevo Entrada de Diario</a>
+										</div>
+										<div style="float:right;" class="form-actions form-left">
+                      <button class="btn btn-alt btn-danger" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+
+											<button class="btn btn-alt btn-danger" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+										</div>
+							</div></div>
+              {% if form_errors(filterForm) %}
+              <div class="span2"></div><div class="span10"> <div class="row"><div class="alert alert-gray fade in">
+                    <button class="close" data-dismiss="alert">×</button>
+                        {{  form_errors(filterForm) }}
+               </div></div></div>
+             {% endif %}
+						</section> {{ form_widget(filterForm._token) }}</form>
+					</article>
+				</div>
+				<div class="row">
+					<article class="span12 data-block">
+						<section>
+							<table class="table table-striped table-bordered table-hover table-media">
+								<thead>
+									<tr>
+						                <!--<th>Id</th> -->
+						                <th width="70">Fecha</th>
+						                <th width="40">Clase</th>
+                            <th width="80">Tipo Producto</th>
+						                <th width="50">Carta Porte</th>
+                            <th width="350">Procedencia o Destino</th>
+                            <th>Entrada(kg)</th>
+                            <th>Salida(kg)</th>
+                            <th>Eliminar</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+							        {% for entity in entities %}
+							            <tr>
+							                 <!--<td><a href="#clienteModal{{ entity.id }}" data-toggle="modal">{{ entity.id }}</a></td>
+                                -->
+                               <td>{{ entity.fecha|date('d.m.Y') }}</td>
+                               <td>{{ entity.claseText }}</td>
+                               <td>{{ entity.productoText }}</td>
+                               <td>{{ entity.cartaporte }}</td>
+							                 <td>{{ entity.procedenciad|length > 150 ? entity.procedenciad|slice(0, 150) ~ '...' : entity.procedenciad }}</td>
+                               <td style="text-align:right;">{{ entity.entrada|number_format(3, '.', ',') }}</td>
+                               <td style="text-align:right;">{{ entity.salida|number_format(3, '.', ',') }}</td>
+
+                        <td>
+							            		<div class="btn-group">
+													          <a title="Eliminar Entrada Libro Diario" onclick="return confirm('Desea eliminar del el Registro? Esta acción no se puede deshacer');" href="{{ path('libro_delete', { 'id': entity.id }) }}" class="btn btn-small"><span class="icon-trash"></span></a>
+							        				</div>
+							                </td>
+
+							            </tr>
+							        {% endfor %}
+							   </tbody>
+						</table>
+		<div class="pagination pagination-right">{{ pagerHtml|raw }}</div>
+					 <form id="formmostrar" name="formmostrar" method="post" action="{{ path('libro') }}">
+						    <div class="dataTables_length"><label>Mostrar
+						    	<select name="cuantos" id="cuantos" onchange="this.form.submit()" class="input-small">
+						        {% for item in cuantos %}
+						                <option value="{{ item }}" {% if item == entradas %} selected="selected" {% endif %}>{{ item }}</option>
+						        {% endfor %}
+						        </ul>
+						    	</select></label>
+						    </div>
+						    </form>
+						  </section>
+					</article>
+				</div>
+			</section>
+			<div class="modal modalEspectaculof fade hide" id="modalClientef">
+			<form name="clientef" id="clientef" class="form-horizontal no-margin" action="{{ path('libro_create') }}" method="post"  {{  form_enctype(form) }}>
+						<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Nuevo Entrada de Libro</h3><hr /></div>
+							<div class="modal-body"><fieldset>
+							 {% include 'PMLibroBundle:Libro:form.html.twig' with { 'form' : form } %}
+							</fieldset>	</div>
+								<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+									<button style="float:right;" type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar</button>
+								</div>
+								    <div style="display:block;">{{  form_errors(form) }} </div>
+							{{  form_widget(form._token) }}</form>
+			</div></div>
+ {% endblock %}

@@ -1,0 +1,35 @@
+// Walking Pixels : Demo style
+
+/* Demo styles */
+.row-fluid.demo,
+.row.demo {
+	color: @white;
+	line-height: 30px;
+	min-height: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	.border-radius(3px);
+	
+	& > div {
+		.border-radius(3px);
+		background-color: @sangomaSilver;
+		& > .row,
+		& > .row-fluid {
+			& > div {
+				margin-bottom: 0;
+				.border-radius(3px);
+				background-color: @sangomaGray;
+			}
+		}
+	}
+}
+.data-block .row-fluid.demo:last-child,
+.data-block .row.demo:last-child {
+	margin-bottom: 0;
+}
+
+.demo > input,
+.demo > select {
+	display: block !important;
+	margin-bottom: 10px;
+}

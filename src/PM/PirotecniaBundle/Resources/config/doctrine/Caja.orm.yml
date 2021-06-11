@@ -1,0 +1,32 @@
+PM\PirotecniaBundle\Entity\Caja:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    peso:
+      type: float
+    riesgo:
+      type: integer
+      nullable: true
+    pesobruto:
+      type: float
+      nullable: true
+  manyToOne:
+    espectaculo:
+      targetEntity: PM\PirotecniaBundle\Entity\Espectaculo
+      inversedBy: cajas
+      cascade: [persist]
+      joinColumn:
+          name: espectaculo_id
+          referencedColumnName: id
+          onDelete: CASCADE
+  oneToMany:
+    cajas:
+      targetEntity: PM\PirotecniaBundle\Entity\ProductoCaja
+      mappedBy: caja
+      cascade: [ persist ]  
+  lifecycleCallbacks: {  }

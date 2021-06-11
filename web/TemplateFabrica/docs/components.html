@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Components | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- CSS styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-green.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+
+		<script src="../js/libs/jquery-ui-1.10.2.custom.min.js"></script>
+
+		<script src="../js/libs/modernizr.js"></script>
+		<script src="../js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-alt btn-inverse pull-right"><span class="awe-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Introduction</a>
+								<ul class="dropdown-menu">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li><a href="file-structure.html">File structure</a></li>
+									<li><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li><a href="data-blocks.html">Data blocks</a></li>
+								</ul>
+							</li>
+							<li><a href="navigation.html">Navigation</a></li>
+							<li class="active">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Components</a>
+								<ul class="dropdown-menu">
+									<li><a href="components.html#tables">Tables</a></li>
+									<li><a href="components.html#forms">Forms</a></li>
+									<li><a href="components.html#icons">Icons</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript</a>
+								<ul class="dropdown-menu">
+									<li><a href="javascript.html#navigation">Navigation</a></li>
+									<li><a href="javascript.html#form-gallery">Form gallery</a></li>
+									<li><a href="javascript.html#todo-list">To-do list</a></li>
+								</ul>
+							</li>
+							<li><a href="plugins.html">Plugins</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Hero unit -->
+				<article class="hero-unit green">
+					<h1><span class="icon-star-alt"></span> CSS components</h1>
+					<p>Sangoma template is packed with additional pre-styled css classes wich makes it even more usable. We are doing are best to keep our style integrated and up to date with latest Twitter Bootstrap framework distribution.</p>
+					<p>Here you can find additional styles for some pre-defined Bootstrap CSS components.</p>
+				</article>
+				<!-- /Hero unit -->
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span12 data-block">
+						<header>
+							<h2>Media table</h2>
+						</header>
+						<section>
+							<p>Use <code>.table-media</code> class for prestyled table with thumbnails.</p>
+							<table class="table table-striped table-bordered table-condensed table-hover table-media">
+								<thead>
+									<tr>
+										<th><input id="optionsCheckbox" type="checkbox" value="option1"></th>
+										<th>ID</th>
+										<th>Image</th>
+										<th>Description</th>
+										<th>Category</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input id="optionsCheckbox" type="checkbox" value="option1"></td>
+										<td>1</td>
+										<td class="thumbnail"><img alt="John Pixel avatar" src="http://placekitten.com/45/45"></td>
+										<td>Image description</td>
+										<td>Item group</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-small"><span class="awe-eye-open"></span></button>
+												<button class="btn btn-small"><span class="awe-pencil"></span></button>
+												<button class="btn btn-small"><span class="awe-trash"></span></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input id="optionsCheckbox" type="checkbox" value="option1"></td>
+										<td>2</td>
+										<td class="thumbnail"><img alt="John Pixel avatar" src="http://placekitten.com/45/45"></td>
+										<td>Image description</td>
+										<td>Item group</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-small"><span class="awe-eye-open"></span></button>
+												<button class="btn btn-small"><span class="awe-pencil"></span></button>
+												<button class="btn btn-small"><span class="awe-trash"></span></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input id="optionsCheckbox" type="checkbox" value="option1"></td>
+										<td>3</td>
+										<td class="thumbnail"><img alt="John Pixel avatar" src="http://placekitten.com/45/45"></td>
+										<td>Image description</td>
+										<td>Item group</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-small"><span class="awe-eye-open"></span></button>
+												<button class="btn btn-small"><span class="awe-pencil"></span></button>
+												<button class="btn btn-small"><span class="awe-trash"></span></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input id="optionsCheckbox" type="checkbox" value="option1"></td>
+										<td>4</td>
+										<td class="thumbnail"><img alt="John Pixel avatar" src="http://placekitten.com/45/45"></td>
+										<td>Image description</td>
+										<td>Item group</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-small"><span class="awe-eye-open"></span></button>
+												<button class="btn btn-small"><span class="awe-pencil"></span></button>
+												<button class="btn btn-small"><span class="awe-trash"></span></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input id="optionsCheckbox" type="checkbox" value="option1"></td>
+										<td>5</td>
+										<td class="thumbnail"><img alt="John Pixel avatar" src="http://placekitten.com/45/45"></td>
+										<td>Image description</td>
+										<td>Item group</td>
+										<td>
+											<div class="btn-group">
+												<button class="btn btn-small"><span class="awe-eye-open"></span></button>
+												<button class="btn btn-small"><span class="awe-pencil"></span></button>
+												<button class="btn btn-small"><span class="awe-trash"></span></button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+						<footer class="warning">
+							<p>A lot of templates do not support vertical table header cells. We do. You can combine &lt;th&gt; as you need (in terms of W3C specification).</p>
+						</footer>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span12 data-block decent" id="forms">
+						<header>
+							<h2>Forms</h2>
+						</header>
+						<section>
+							<p>All form elements are styled according to Twitter Bootstrap syntax. I you are not familiar with bootstrap framework you should check their <a href="http://twitter.github.io/bootstrap">official documentation</a>.</p>
+							<p>Sangoma template uses several form handling plugins. Check them out on <a href="plugins.html">plugins</a> page.</p>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+				
+					<!-- Data block -->
+					<article class="span12 data-block accordion-block decent" id="icons">
+						<div id="icons" class="accordion">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" href="#awesome" data-parent="#icons" data-toggle="collapse">Icons with Font Awesome</a>
+								</div>
+								<div id="awesome" class="accordion-body collapse">
+									<div class="accordion-inner">
+										<div id="slimScroll1">
+											<p>Font Awesome is iconic font designed for use with Twitter Bootstrap with over 220 icons. You can still use original icons by removing Font Awesome from LESS and recompiling it. For more info and updates vist <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">official Font Awesome page</a>.</p>
+											<h3>Web Application Icons</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-adjust"></span> awe-adjust</li>
+														<li><span class="awe-asterisk"></span> awe-asterisk</li>
+														<li><span class="awe-ban-circle"></span> awe-ban-circle</li>
+														<li><span class="awe-bar-chart"></span> awe-bar-chart</li>
+														<li><span class="awe-barcode"></span> awe-barcode</li>
+														<li><span class="awe-beaker"></span> awe-beaker</li>
+														<li><span class="awe-bell"></span> awe-bell</li>
+														<li><span class="awe-bolt"></span> awe-bolt</li>
+														<li><span class="awe-book"></span> awe-book</li>
+														<li><span class="awe-bookmark"></span> awe-bookmark</li>
+														<li><span class="awe-bookmark-empty"></span> awe-bookmark-empty</li>
+														<li><span class="awe-briefcase"></span> awe-briefcase</li>
+														<li><span class="awe-bullhorn"></span> awe-bullhorn</li>
+														<li><span class="awe-calendar"></span> awe-calendar</li>
+														<li><span class="awe-camera"></span> awe-camera</li>
+														<li><span class="awe-camera-retro"></span> awe-camera-retro</li>
+														<li><span class="awe-certificate"></span> awe-certificate</li>
+														<li><span class="awe-check"></span> awe-check</li>
+														<li><span class="awe-check-empty"></span> awe-check-empty</li>
+														<li><span class="awe-cloud"></span> awe-cloud</li>
+														<li><span class="awe-cog"></span> awe-cog</li>
+														<li><span class="awe-cogs"></span> awe-cogs</li>
+														<li><span class="awe-comment"></span> awe-comment</li>
+														<li><span class="awe-comment-alt"></span> awe-comment-alt</li>
+														<li><span class="awe-comments"></span> awe-comments</li>
+														<li><span class="awe-comments-alt"></span> awe-comments-alt</li>
+														<li><span class="awe-credit-card"></span> awe-credit-card</li>
+														<li><span class="awe-dashboard"></span> awe-dashboard</li>
+														<li><span class="awe-download"></span> awe-download</li>
+														<li><span class="awe-download-alt"></span> awe-download-alt</li>
+														<li><span class="awe-edit"></span> awe-edit</li>
+														<li><span class="awe-envelope"></span> awe-envelope</li>
+														<li><span class="awe-envelope-alt"></span> awe-envelope-alt</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-exclamation-sign"></span> awe-exclamation-sign</li>
+														<li><span class="awe-external-link"></span> awe-external-link</li>
+														<li><span class="awe-eye-close"></span> awe-eye-close</li>
+														<li><span class="awe-eye-open"></span> awe-eye-open</li>
+														<li><span class="awe-facetime-video"></span> awe-facetime-video</li>
+														<li><span class="awe-film"></span> awe-film</li>
+														<li><span class="awe-filter"></span> awe-filter</li>
+														<li><span class="awe-fire"></span> awe-fire</li>
+														<li><span class="awe-flag"></span> awe-flag</li>
+														<li><span class="awe-folder-close"></span> awe-folder-close</li>
+														<li><span class="awe-folder-open"></span> awe-folder-open</li>
+														<li><span class="awe-gift"></span> awe-gift</li>
+														<li><span class="awe-glass"></span> awe-glass</li>
+														<li><span class="awe-globe"></span> awe-globe</li>
+														<li><span class="awe-group"></span> awe-group</li>
+														<li><span class="awe-hdd"></span> awe-hdd</li>
+														<li><span class="awe-headphones"></span> awe-headphones</li>
+														<li><span class="awe-heart"></span> awe-heart</li>
+														<li><span class="awe-heart-empty"></span> awe-heart-empty</li>
+														<li><span class="awe-home"></span> awe-home</li>
+														<li><span class="awe-inbox"></span> awe-inbox</li>
+														<li><span class="awe-info-sign"></span> awe-info-sign</li>
+														<li><span class="awe-key"></span> awe-key</li>
+														<li><span class="awe-leaf"></span> awe-leaf</li>
+														<li><span class="awe-legal"></span> awe-legal</li>
+														<li><span class="awe-lemon"></span> awe-lemon</li>
+														<li><span class="awe-lock"></span> awe-lock</li>
+														<li><span class="awe-unlock"></span> awe-unlock</li>
+														<li><span class="awe-magic"></span> awe-magic</li>
+														<li><span class="awe-magnet"></span> awe-magnet</li>
+														<li><span class="awe-map-marker"></span> awe-map-marker</li>
+														<li><span class="awe-minus"></span> awe-minus</li>
+														<li><span class="awe-minus-sign"></span> awe-minus-sign</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-money"></span> awe-money</li>
+														<li><span class="awe-move"></span> awe-move</li>
+														<li><span class="awe-music"></span> awe-music</li>
+														<li><span class="awe-off"></span> awe-off</li>
+														<li><span class="awe-ok"></span> awe-ok</li>
+														<li><span class="awe-ok-circle"></span> awe-ok-circle</li>
+														<li><span class="awe-ok-sign"></span> awe-ok-sign</li>
+														<li><span class="awe-pencil"></span> awe-pencil</li>
+														<li><span class="awe-picture"></span> awe-picture</li>
+														<li><span class="awe-plane"></span> awe-plane</li>
+														<li><span class="awe-plus"></span> awe-plus</li>
+														<li><span class="awe-plus-sign"></span> awe-plus-sign</li>
+														<li><span class="awe-print"></span> awe-print</li>
+														<li><span class="awe-pushpin"></span> awe-pushpin</li>
+														<li><span class="awe-qrcode"></span> awe-qrcode</li>
+														<li><span class="awe-question-sign"></span> awe-question-sign</li>
+														<li><span class="awe-random"></span> awe-random</li>
+														<li><span class="awe-refresh"></span> awe-refresh</li>
+														<li><span class="awe-remove"></span> awe-remove</li>
+														<li><span class="awe-remove-circle"></span> awe-remove-circle</li>
+														<li><span class="awe-remove-sign"></span> awe-remove-sign</li>
+														<li><span class="awe-reorder"></span> awe-reorder</li>
+														<li><span class="awe-resize-horizontal"></span> awe-resize-horizontal</li>
+														<li><span class="awe-resize-vertical"></span> awe-resize-vertical</li>
+														<li><span class="awe-retweet"></span> awe-retweet</li>
+														<li><span class="awe-road"></span> awe-road</li>
+														<li><span class="awe-rss"></span> awe-rss</li>
+														<li><span class="awe-screenshot"></span> awe-screenshot</li>
+														<li><span class="awe-search"></span> awe-search</li>
+														<li><span class="awe-share"></span> awe-share</li>
+														<li><span class="awe-share-alt"></span> awe-share-alt</li>
+														<li><span class="awe-shopping-cart"></span> awe-shopping-cart</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-signal"></span> awe-signal</li>
+														<li><span class="awe-signin"></span> awe-signin</li>
+														<li><span class="awe-signout"></span> awe-signout</li>
+														<li><span class="awe-sitemap"></span> awe-sitemap</li>
+														<li><span class="awe-sort"></span> awe-sort</li>
+														<li><span class="awe-sort-down"></span> awe-sort-down</li>
+														<li><span class="awe-sort-up"></span> awe-sort-up</li>
+														<li><span class="awe-star"></span> awe-star</li>
+														<li><span class="awe-star-empty"></span> awe-star-empty</li>
+														<li><span class="awe-star-half"></span> awe-star-half</li>
+														<li><span class="awe-tag"></span> awe-tag</li>
+														<li><span class="awe-tags"></span> awe-tags</li>
+														<li><span class="awe-tasks"></span> awe-tasks</li>
+														<li><span class="awe-thumbs-down"></span> awe-thumbs-down</li>
+														<li><span class="awe-thumbs-up"></span> awe-thumbs-up</li>
+														<li><span class="awe-time"></span> awe-time</li>
+														<li><span class="awe-tint"></span> awe-tint</li>
+														<li><span class="awe-trash"></span> awe-trash</li>
+														<li><span class="awe-trophy"></span> awe-trophy</li>
+														<li><span class="awe-truck"></span> awe-truck</li>
+														<li><span class="awe-umbrella"></span> awe-umbrella</li>
+														<li><span class="awe-upload"></span> awe-upload</li>
+														<li><span class="awe-upload-alt"></span> awe-upload-alt</li>
+														<li><span class="awe-user"></span> awe-user</li>
+														<li><span class="awe-user-md"></span> awe-user-md</li>
+														<li><span class="awe-volume-off"></span> awe-volume-off</li>
+														<li><span class="awe-volume-down"></span> awe-volume-down</li>
+														<li><span class="awe-volume-up"></span> awe-volume-up</li>
+														<li><span class="awe-warning-sign"></span> awe-warning-sign</li>
+														<li><span class="awe-wrench"></span> awe-wrench</li>
+														<li><span class="awe-zoom-in"></span> awe-zoom-in</li>
+														<li><span class="awe-zoom-out"></span> awe-zoom-out</li>
+													</ul>
+												</div>
+											</div>
+											<h3>Text Editor awes</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-file"></span> awe-file</li>
+														<li><span class="awe-cut"></span> awe-cut</li>
+														<li><span class="awe-copy"></span> awe-copy</li>
+														<li><span class="awe-paste"></span> awe-paste</li>
+														<li><span class="awe-save"></span> awe-save</li>
+														<li><span class="awe-undo"></span> awe-undo</li>
+														<li><span class="awe-repeat"></span> awe-repeat</li>
+														<li><span class="awe-paper-clip"></span> awe-paper-clip</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-text-height"></span> awe-text-height</li>
+														<li><span class="awe-text-width"></span> awe-text-width</li>
+														<li><span class="awe-align-left"></span> awe-align-left</li>
+														<li><span class="awe-align-center"></span> awe-align-center</li>
+														<li><span class="awe-align-right"></span> awe-align-right</li>
+														<li><span class="awe-align-justify"></span> awe-align-justify</li>
+														<li><span class="awe-indent-left"></span> awe-indent-left</li>
+														<li><span class="awe-indent-right"></span> awe-indent-right</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-font"></span> awe-font</li>
+														<li><span class="awe-bold"></span> awe-bold</li>
+														<li><span class="awe-italic"></span> awe-italic</li>
+														<li><span class="awe-strikethrough"></span> awe-strikethrough</li>
+														<li><span class="awe-underline"></span> awe-underline</li>
+														<li><span class="awe-link"></span> awe-link</li>
+														<li><span class="awe-columns"></span> awe-columns</li>
+														<li><span class="awe-table"></span> awe-table</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-th-large"></span> awe-th-large</li>
+														<li><span class="awe-th"></span> awe-th</li>
+														<li><span class="awe-th-list"></span> awe-th-list</li>
+														<li><span class="awe-list"></span> awe-list</li>
+														<li><span class="awe-list-ol"></span> awe-list-ol</li>
+														<li><span class="awe-list-ul"></span> awe-list-ul</li>
+														<li><span class="awe-list-alt"></span> awe-list-alt</li>
+													</ul>
+												</div>
+											</div>
+											<h3>Directional awes</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-arrow-down"></span> awe-arrow-down</li>
+														<li><span class="awe-arrow-left"></span> awe-arrow-left</li>
+														<li><span class="awe-arrow-right"></span> awe-arrow-right</li>
+														<li><span class="awe-arrow-up"></span> awe-arrow-up</li>
+														<li><span class="awe-chevron-down"></span> awe-chevron-down</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-circle-arrow-down"></span> awe-circle-arrow-down</li>
+														<li><span class="awe-circle-arrow-left"></span> awe-circle-arrow-left</li>
+														<li><span class="awe-circle-arrow-right"></span> awe-circle-arrow-right</li>
+														<li><span class="awe-circle-arrow-up"></span> awe-circle-arrow-up</li>
+														<li><span class="awe-chevron-left"></span> awe-chevron-left</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-caret-down"></span> awe-caret-down</li>
+														<li><span class="awe-caret-left"></span> awe-caret-left</li>
+														<li><span class="awe-caret-right"></span> awe-caret-right</li>
+														<li><span class="awe-caret-up"></span> awe-caret-up</li>
+														<li><span class="awe-chevron-right"></span> awe-chevron-right</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-hand-down"></span> awe-hand-down</li>
+														<li><span class="awe-hand-left"></span> awe-hand-left</li>
+														<li><span class="awe-hand-right"></span> awe-hand-right</li>
+														<li><span class="awe-hand-up"></span> awe-hand-up</li>
+														<li><span class="awe-chevron-up"></span> awe-chevron-up</li>
+													</ul>
+												</div>
+											</div>
+											<h3>Video Player awes</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-play-circle"></span> awe-play-circle</li>
+														<li><span class="awe-play"></span> awe-play</li>
+														<li><span class="awe-pause"></span> awe-pause</li>
+														<li><span class="awe-stop"></span> awe-stop</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-step-backward"></span> awe-step-backward</li>
+														<li><span class="awe-fast-backward"></span> awe-fast-backward</li>
+														<li><span class="awe-backward"></span> awe-backward</li>
+														<li><span class="awe-forward"></span> awe-forward</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-fast-forward"></span> awe-fast-forward</li>
+														<li><span class="awe-step-forward"></span> awe-step-forward</li>
+														<li><span class="awe-eject"></span> awe-eject</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-fullscreen"></span> awe-fullscreen</li>
+														<li><span class="awe-resize-full"></span> awe-resize-full</li>
+														<li><span class="awe-resize-small"></span> awe-resize-small</li>
+													</ul>
+												</div>
+											</div>
+											<h3>Social awes</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-phone"></span> awe-phone</li>
+														<li><span class="awe-phone-sign"></span> awe-phone-sign</li>
+														<li><span class="awe-facebook"></span> awe-facebook</li>
+														<li><span class="awe-facebook-sign"></span> awe-facebook-sign</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-twitter"></span> awe-twitter</li>
+														<li><span class="awe-twitter-sign"></span> awe-twitter-sign</li>
+														<li><span class="awe-github"></span> awe-github</li>
+														<li><span class="awe-github-sign"></span> awe-github-sign</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-linkedin"></span> awe-linkedin</li>
+														<li><span class="awe-linkedin-sign"></span> awe-linkedin-sign</li>
+														<li><span class="awe-pinterest"></span> awe-pinterest</li>
+														<li><span class="awe-pinterest-sign"></span> awe-pinterest-sign</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="awe-google-plus"></span> awe-google-plus</li>
+														<li><span class="awe-google-plus-sign"></span> awe-google-plus-sign</li>
+														<li><span class="awe-sign-blank"></span> awe-sign-blank</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" href="#bsicons" data-parent="#icons" data-toggle="collapse">Elusive Icons</a>
+								</div>
+								<div id="bsicons" class="accordion-body collapse">
+									<div class="accordion-inner">
+										<div id="slimScroll2">
+											<p>270 Sleek vector icons for bootstrap, provided by <a href="http://aristath.github.com/elusive-iconfont/" target="_blank">Elusive Icons</a>.</p>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="icon-glass"></span> icon-glass</li>
+														<li><span class="icon-music"></span> icon-music</li>
+														<li><span class="icon-search"></span> icon-search</li>
+														<li><span class="icon-envelope"></span> icon-envelope</li>
+														<li><span class="icon-heart"></span> icon-heart</li>
+														<li><span class="icon-star"></span> icon-star</li>
+														<li><span class="icon-star-empty"></span> icon-star-empty</li>
+														<li><span class="icon-user"></span> icon-user</li>
+														<li><span class="icon-film"></span> icon-film</li>
+														<li><span class="icon-th-large"></span> icon-th-large</li>
+														<li><span class="icon-th"></span> icon-th</li>
+														<li><span class="icon-th-list"></span> icon-th-list</li>
+														<li><span class="icon-ok"></span> icon-ok</li>
+														<li><span class="icon-remove"></span> icon-remove</li>
+														<li><span class="icon-zoom-in"></span> icon-zoom-in</li>
+														<li><span class="icon-zoom-out"></span> icon-zoom-out</li>
+														<li><span class="icon-off"></span> icon-off</li>
+														<li><span class="icon-signal"></span> icon-signal</li>
+														<li><span class="icon-cog"></span> icon-cog</li>
+														<li><span class="icon-trash"></span> icon-trash</li>
+														<li><span class="icon-home"></span> icon-home</li>
+														<li><span class="icon-file"></span> icon-file</li>
+														<li><span class="icon-time"></span> icon-time</li>
+														<li><span class="icon-road"></span> icon-road</li>
+														<li><span class="icon-download-alt"></span> icon-download-alt</li>
+														<li><span class="icon-download"></span> icon-download</li>
+														<li><span class="icon-upload"></span> icon-upload</li>
+														<li><span class="icon-inbox"></span> icon-inbox</li>
+														<li><span class="icon-play-circle"></span> icon-play-circle</li>
+														<li><span class="icon-repeat"></span> icon-repeat</li>
+														<li><span class="icon-refresh"></span> icon-refresh</li>
+														<li><span class="icon-list-alt"></span> icon-list-alt</li>
+														<li><span class="icon-lock"></span> icon-lock</li>
+														<li><span class="icon-flag"></span> icon-flag</li>
+														<li><span class="icon-headphones"></span> icon-headphones</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="icon-volume-off"></span> icon-volume-off</li>
+														<li><span class="icon-volume-down"></span> icon-volume-down</li>
+														<li><span class="icon-volume-up"></span> icon-volume-up</li>
+														<li><span class="icon-qrcode"></span> icon-qrcode</li>
+														<li><span class="icon-barcode"></span> icon-barcode</li>
+														<li><span class="icon-tag"></span> icon-tag</li>
+														<li><span class="icon-tags"></span> icon-tags</li>
+														<li><span class="icon-book"></span> icon-book</li>
+														<li><span class="icon-bookmark"></span> icon-bookmark</li>
+														<li><span class="icon-print"></span> icon-print</li>
+														<li><span class="icon-camera"></span> icon-camera</li>
+														<li><span class="icon-font"></span> icon-font</li>
+														<li><span class="icon-bold"></span> icon-bold</li>
+														<li><span class="icon-italic"></span> icon-italic</li>
+														<li><span class="icon-text-height"></span> icon-text-height</li>
+														<li><span class="icon-text-width"></span> icon-text-width</li>
+														<li><span class="icon-align-left"></span> icon-align-left</li>
+														<li><span class="icon-align-center"></span> icon-align-center</li>
+														<li><span class="icon-align-right"></span> icon-align-right</li>
+														<li><span class="icon-align-justify"></span> icon-align-justify</li>
+														<li><span class="icon-list"></span> icon-list</li>
+														<li><span class="icon-indent-left"></span> icon-indent-left</li>
+														<li><span class="icon-indent-right"></span> icon-indent-right</li>
+														<li><span class="icon-facetime-video"></span> icon-facetime-video</li>
+														<li><span class="icon-picture"></span> icon-picture</li>
+														<li><span class="icon-pencil"></span> icon-pencil</li>
+														<li><span class="icon-map-marker"></span> icon-map-marker</li>
+														<li><span class="icon-adjust"></span> icon-adjust</li>
+														<li><span class="icon-tint"></span> icon-tint</li>
+														<li><span class="icon-edit"></span> icon-edit</li>
+														<li><span class="icon-share"></span> icon-share</li>
+														<li><span class="icon-check"></span> icon-check</li>
+														<li><span class="icon-move"></span> icon-move</li>
+														<li><span class="icon-step-backward"></span> icon-step-backward</li>
+														<li><span class="icon-fast-backward"></span> icon-fast-backward</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="icon-backward"></span> icon-backward</li>
+														<li><span class="icon-play"></span> icon-play</li>
+														<li><span class="icon-pause"></span> icon-pause</li>
+														<li><span class="icon-stop"></span> icon-stop</li>
+														<li><span class="icon-forward"></span> icon-forward</li>
+														<li><span class="icon-fast-forward"></span> icon-fast-forward</li>
+														<li><span class="icon-step-forward"></span> icon-step-forward</li>
+														<li><span class="icon-eject"></span> icon-eject</li>
+														<li><span class="icon-chevron-left"></span> icon-chevron-left</li>
+														<li><span class="icon-chevron-right"></span> icon-chevron-right</li>
+														<li><span class="icon-plus-sign"></span> icon-plus-sign</li>
+														<li><span class="icon-minus-sign"></span> icon-minus-sign</li>
+														<li><span class="icon-remove-sign"></span> icon-remove-sign</li>
+														<li><span class="icon-ok-sign"></span> icon-ok-sign</li>
+														<li><span class="icon-question-sign"></span> icon-question-sign</li>
+														<li><span class="icon-info-sign"></span> icon-info-sign</li>
+														<li><span class="icon-screenshot"></span> icon-screenshot</li>
+														<li><span class="icon-remove-circle"></span> icon-remove-circle</li>
+														<li><span class="icon-ok-circle"></span> icon-ok-circle</li>
+														<li><span class="icon-ban-circle"></span> icon-ban-circle</li>
+														<li><span class="icon-arrow-left"></span> icon-arrow-left</li>
+														<li><span class="icon-arrow-right"></span> icon-arrow-right</li>
+														<li><span class="icon-arrow-up"></span> icon-arrow-up</li>
+														<li><span class="icon-arrow-down"></span> icon-arrow-down</li>
+														<li><span class="icon-share-alt"></span> icon-share-alt</li>
+														<li><span class="icon-resize-full"></span> icon-resize-full</li>
+														<li><span class="icon-resize-small"></span> icon-resize-small</li>
+														<li><span class="icon-plus"></span> icon-plus</li>
+														<li><span class="icon-minus"></span> icon-minus</li>
+														<li><span class="icon-asterisk"></span> icon-asterisk</li>
+														<li><span class="icon-exclamation-sign"></span> icon-exclamation-sign</li>
+														<li><span class="icon-gift"></span> icon-gift</li>
+														<li><span class="icon-leaf"></span> icon-leaf</li>
+														<li><span class="icon-fire"></span> icon-fire</li>
+														<li><span class="icon-eye-open"></span> icon-eye-open</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><span class="icon-eye-close"></span> icon-eye-close</li>
+														<li><span class="icon-warning-sign"></span> icon-warning-sign</li>
+														<li><span class="icon-plane"></span> icon-plane</li>
+														<li><span class="icon-calendar"></span> icon-calendar</li>
+														<li><span class="icon-random"></span> icon-random</li>
+														<li><span class="icon-comment"></span> icon-comment</li>
+														<li><span class="icon-magnet"></span> icon-magnet</li>
+														<li><span class="icon-chevron-up"></span> icon-chevron-up</li>
+														<li><span class="icon-chevron-down"></span> icon-chevron-down</li>
+														<li><span class="icon-retweet"></span> icon-retweet</li>
+														<li><span class="icon-shopping-cart"></span> icon-shopping-cart</li>
+														<li><span class="icon-folder-close"></span> icon-folder-close</li>
+														<li><span class="icon-folder-open"></span> icon-folder-open</li>
+														<li><span class="icon-resize-vertical"></span> icon-resize-vertical</li>
+														<li><span class="icon-resize-horizontal"></span> icon-resize-horizontal</li>
+														<li><span class="icon-hdd"></span> icon-hdd</li>
+														<li><span class="icon-bullhorn"></span> icon-bullhorn</li>
+														<li><span class="icon-bell"></span> icon-bell</li>
+														<li><span class="icon-certificate"></span> icon-certificate</li>
+														<li><span class="icon-thumbs-up"></span> icon-thumbs-up</li>
+														<li><span class="icon-thumbs-down"></span> icon-thumbs-down</li>
+														<li><span class="icon-hand-right"></span> icon-hand-right</li>
+														<li><span class="icon-hand-left"></span> icon-hand-left</li>
+														<li><span class="icon-hand-up"></span> icon-hand-up</li>
+														<li><span class="icon-hand-down"></span> icon-hand-down</li>
+														<li><span class="icon-circle-arrow-right"></span> icon-circle-arrow-right</li>
+														<li><span class="icon-circle-arrow-left"></span> icon-circle-arrow-left</li>
+														<li><span class="icon-circle-arrow-up"></span> icon-circle-arrow-up</li>
+														<li><span class="icon-circle-arrow-down"></span> icon-circle-arrow-down</li>
+														<li><span class="icon-globe"></span> icon-globe</li>
+														<li><span class="icon-wrench"></span> icon-wrench</li>
+														<li><span class="icon-tasks"></span> icon-tasks</li>
+														<li><span class="icon-filter"></span> icon-filter</li>
+														<li><span class="icon-briefcase"></span> icon-briefcase</li>
+														<li><span class="icon-fullscreen"></span> icon-fullscreen</li>
+													</ul>
+												</div>
+											</div>
+											<h3>Social Icons</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-facebook"></i> icon-facebook</li>
+														<li><i class="icon-twitter"></i> icon-twitter</li>
+														<li><i class="icon-googleplus"></i> icon-googleplus</li>
+														<li><i class="icon-linkedin"></i> icon-linkedin</li>
+														<li><i class="icon-pinterest"></i> icon-pinterest</li>
+														<li><i class="icon-foursquare"></i> icon-foursquare</li>
+														<li><i class="icon-youtube"></i> icon-youtube</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-vimeo"></i> icon-vimeo</li>
+														<li><i class="icon-skype"></i> icon-skype</li>
+														<li><i class="icon-picasa"></i> icon-picasa</li>
+														<li><i class="icon-stumbleupon"></i> icon-stumbleupon</li>
+														<li><i class="icon-digg"></i> icon-digg</li>
+														<li><i class="icon-tumblr"></i> icon-tumblr</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-github"></i> icon-github</li>
+														<li><i class="icon-github-text"></i> icon-github-text</li>
+														<li><i class="icon-friendfeed"></i> icon-friendfeed</li>
+														<li><i class="icon-friendfeed-rect"></i> icon-friendfeed-rect</li>
+														<li><i class="icon-wordpress"></i> icon-wordpress</li>
+														<li><i class="icon-slideshare"></i> icon-slideshare</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-reddit"></i> icon-reddit</li>
+														<li><i class="icon-dribble"></i> icon-dribble</li>
+														<li><i class="icon-behance"></i> icon-behance</li>
+														<li><i class="icon-deviantart"></i> icon-deviantart</li>
+														<li><i class="icon-delicious"></i> icon-delicious</li>
+														<li><i class="icon-stackoverflow"></i> icon-stackoverflow</li>
+													</ul>
+												</div>
+											</div>
+											<h3>General Use Icons</h3>
+											<div class="row-fluid">
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-website"></i> icon-website</li>
+														<li><i class="icon-website-alt"></i> icon-website-alt</li>
+														<li><i class="icon-fontsize"></i> icon-fontsize</li>
+														<li><i class="icon-view-mode"></i> icon-view-mode</li>
+														<li><i class="icon-wrench-alt"></i> icon-wrench-alt</li>
+														<li><i class="icon-video-chat"></i> icon-video-chat</li>
+														<li><i class="icon-video-alt"></i> icon-video-alt</li>
+														<li><i class="icon-star-alt"></i> icon-star-alt</li>
+														<li><i class="icon-video"></i> icon-video</li>
+														<li><i class="icon-unlock"></i> icon-unlock</li>
+														<li><i class="icon-unlock-alt"></i> icon-unlock-alt</li>
+														<li><i class="icon-trash-alt"></i> icon-trash-alt</li>
+														<li><i class="icon-torso"></i> icon-torso</li>
+														<li><i class="icon-reverse-alt"></i> icon-reverse-alt</li>
+														<li><i class="icon-stop-alt"></i> icon-stop-alt</li>
+														<li><i class="icon-play-alt"></i> icon-play-alt</li>
+														<li><i class="icon-pause-alt"></i> icon-pause-alt</li>
+														<li><i class="icon-record"></i> icon-record</li>
+														<li><i class="icon-repeat-alt"></i> icon-repeat-alt</li>
+														<li><i class="icon-mic"></i> icon-mic</li>
+														<li><i class="icon-mic-alt"></i> icon-mic-alt</li>
+														<li><i class="icon-speaker"></i> icon-speaker</li>
+														<li><i class="icon-smiley"></i> icon-smiley</li>
+														<li><i class="icon-smiley-alt"></i> icon-smiley-alt</li>
+														<li><i class="icon-search-alt"></i> icon-search-alt</li>
+														<li><i class="icon-screen"></i> icon-screen</li>
+														<li><i class="icon-screen-alt"></i> icon-screen-alt</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-time-alt"></i> icon-time-alt</li>
+														<li><i class="icon-shopping-cart-sign"></i> icon-shopping-cart-sign</li>
+														<li><i class="icon-rss"></i> icon-rss</li>
+														<li><i class="icon-quotes"></i> icon-quotes</li>
+														<li><i class="icon-quotes-alt"></i> icon-quotes-alt</li>
+														<li><i class="icon-photo"></i> icon-photo</li>
+														<li><i class="icon-photo-alt"></i> icon-photo-alt</li>
+														<li><i class="icon-wheelchair"></i> icon-wheelchair</li>
+														<li><i class="icon-universal-access"></i> icon-universal-access</li>
+														<li><i class="icon-question"></i> icon-question</li>
+														<li><i class="icon-phone-alt"></i> icon-phone-alt</li>
+														<li><i class="icon-phone"></i> icon-phone</li>
+														<li><i class="icon-person"></i> icon-person</li>
+														<li><i class="icon-pencil-alt"></i> icon-pencil-alt</li>
+														<li><i class="icon-path"></i> icon-path</li>
+														<li><i class="icon-paper-clip-alt"></i> icon-paper-clip-alt</li>
+														<li><i class="icon-paper-clip"></i> icon-paper-clip</li>
+														<li><i class="icon-network"></i> icon-network</li>
+														<li><i class="icon-error-alt"></i> icon-error-alt</li>
+														<li><i class="icon-error"></i> icon-error</li>
+														<li><i class="icon-map-marker-alt"></i> icon-map-marker-alt</li>
+														<li><i class="icon-male"></i> icon-male</li>
+														<li><i class="icon-mail-alt"></i> icon-mail-alt</li>
+														<li><i class="icon-lock-alt"></i> icon-lock-alt</li>
+														<li><i class="icon-laptop-alt"></i> icon-laptop-alt</li>
+														<li><i class="icon-laptop"></i> icon-laptop</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-key"></i> icon-key</li>
+														<li><i class="icon-iphone-home"></i> icon-iphone-home</li>
+														<li><i class="icon-instagram"></i> icon-instagram</li>
+														<li><i class="icon-inbox-alt"></i> icon-inbox-alt</li>
+														<li><i class="icon-idea-alt"></i> icon-idea-alt</li>
+														<li><i class="icon-idea"></i> icon-idea</li>
+														<li><i class="icon-home-alt"></i> icon-home-alt</li>
+														<li><i class="icon-heart-empty"></i> icon-heart-empty</li>
+														<li><i class="icon-heart-alt"></i> icon-heart-alt</li>
+														<li><i class="icon-hearing-impaired"></i> icon-hearing-impaired</li>
+														<li><i class="icon-guidedog"></i> icon-guidedog</li>
+														<li><i class="icon-group-alt"></i> icon-group-alt</li>
+														<li><i class="icon-group"></i> icon-group</li>
+														<li><i class="icon-graph-alt"></i> icon-graph-alt</li>
+														<li><i class="icon-graph"></i> icon-graph</li>
+														<li><i class="icon-globe-alt"></i> icon-globe-alt</li>
+														<li><i class="icon-glasses"></i> icon-glasses</li>
+														<li><i class="icon-forward-alt"></i> icon-forward-alt</li>
+														<li><i class="icon-folder-sign"></i> icon-folder-sign</li>
+														<li><i class="icon-folder"></i> icon-folder</li>
+														<li><i class="icon-flickr"></i> icon-flickr</li>
+														<li><i class="icon-flag-alt"></i> icon-flag-alt</li>
+														<li><i class="icon-file-new-alt"></i> icon-file-new-alt</li>
+														<li><i class="icon-file-new"></i> icon-file-new</li>
+														<li><i class="icon-file-edit-alt"></i> icon-file-edit-alt</li>
+														<li><i class="icon-file-edit"></i> icon-file-edit</li>
+													</ul>
+												</div>
+												<div class="span3">
+													<ul class="unstyled">
+														<li><i class="icon-file-alt"></i> icon-file-alt</li>
+														<li><i class="icon-female"></i> icon-female</li>
+														<li><i class="icon-inbox-box"></i> icon-inbox-box</li>
+														<li><i class="icon-dashboard"></i> icon-dashboard</li>
+														<li><i class="icon-credit-card"></i> icon-credit-card</li>
+														<li><i class="icon-compass-alt"></i> icon-compass-alt</li>
+														<li><i class="icon-compass"></i> icon-compass</li>
+														<li><i class="icon-comment-alt"></i> icon-comment-alt</li>
+														<li><i class="icon-child"></i> icon-child</li>
+														<li><i class="icon-check-empty"></i> icon-check-empty</li>
+														<li><i class="icon-cc"></i> icon-cc</li>
+														<li><i class="icon-calendar-sign"></i> icon-calendar-sign</li>
+														<li><i class="icon-blind"></i> icon-blind</li>
+														<li><i class="icon-asl"></i> icon-asl</li>
+														<li><i class="icon-cogs"></i> icon-cogs</li>
+														<li><i class="icon-cog-alt"></i> icon-cog-alt</li>
+														<li><i class="icon-cloud-alt"></i> icon-cloud-alt</li>
+														<li><i class="icon-cloud"></i> icon-cloud</li>
+														<li><i class="icon-braille"></i> icon-braille</li>
+														<li><i class="icon-bookmark-empty"></i> icon-bookmark-empty</li>
+														<li><i class="icon-blogger"></i> icon-blogger</li>
+														<li><i class="icon-adult"></i> icon-adult</li>
+														<li><i class="icon-address-book"></i> icon-address-book</li>
+														<li><i class="icon-address-book-alt"></i> icon-address-book-alt</li>
+														<li><i class="icon-w3c"></i> icon-w3c</li>
+														<li><i class="icon-css"></i> icon-css</li>
+													</ul>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Slimscroll plugin -->
+		<script src="../js/plugins/slimScroll/jquery.slimscroll.js"></script>
+		<script>
+			$(document).ready(function() {
+			
+				$('#slimScroll1, #slimScroll2').slimScroll({
+					height: '350px'
+				});
+
+			});
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block content %}
+<div class="row">
+					<article class="span12 data-block dark">
+						<header>
+							<h2>Informes Mensual</h2>
+						</header>
+						<section>
+						<div class="span10">
+						<div class="row">	<form class="form-horizontal no-margin" action="{{ path('informe_mensual') }}" method="POST" {{ form_enctype(filterForm) }}>
+						<span class="span5">
+							<div id="horizontal">
+									<div class="control-group">
+											{{ form_label(filterForm.meses, '', { 'label_attr': {'class': 'control-label'}}) }}
+											<div class="controls">{{ form_widget(filterForm.meses, { 'attr': {'class': 'span2'}}) }}</div>
+										</div>
+							</div>
+							</span>
+							<span class="span5">
+								<div id="horizontal" class="form-horizontal">
+										<div class="control-group">
+										{{ form_label(filterForm.anos, 'Año', { 'label_attr': {'class': 'control-label'}}) }}
+										<div class="controls">{{ form_widget(filterForm.anos, { 'attr': {'class': 'span2'}}) }}</div>
+										</div>
+							</div>
+							</span>
+							</span>
+						</div>
+						<div class="row">
+										<div style="float:right;" class="form-actions form-left">
+										<button class="btn btn-alt btn-turquesa" value="filter" name="filter_action" type="submit"><span class="awe-filter"></span>Filtrar</button>
+
+										<button class="btn btn-alt btn-turquesa" value="reset" name="filter_action" type="submit"><span class="awe-trash"></span>Limpiar</button>
+										</div>
+							</div></div>
+									<strong>{{  form_errors(filterForm) }}</strong>
+			 				{{ form_widget(filterForm._token) }}</form>
+
+						</section>
+
+					</article>
+				</div>
+				{% if mes != '' %}
+				<div class="row">
+									<article class="span12 data-block dark">
+										<header>
+											<h2>Informe Mensual {{ mes }} de {{ ano }}</h2>
+										</header>
+										<section>
+										<div class="row-fluid">
+										    <div class="span2">&nbsp;</div>
+												<div class="span5"><h4 class="no-margin">RESUMEN</h4>
+													<dl class="dl-horizontal">
+													  {# set c11g = clase11g.0.entradas - clase11g.0.salidas #}
+													  {# set c13g = clase13g.0.entradas - clase13g.0.salidas #}
+													  {# set c14g = clase14g.0.entradas - clase14g.0.salidas #}
+													  {# set c14s = clase14s.0.entradas - clase14s.0.salidas #}
+														{% set exist = iniciales %}
+														{% set entradas = entradas %}
+														{% set suman = exist + entradas %}
+														{% set salidas = salidas %}
+														{% set total = suman - salidas %}
+														<dt>Existencias:</dt><dd>{{ exist|number_format(3, '.', ',') }} Kgs </dd>
+														<dt>Entradas:</dt><dd>{{ entradas|number_format(3, '.', ',') }} Kgs</dd>
+														<dt>Suman:</dt><dd>{{ suman|number_format(3, '.', ',') }} Kgs</dd>
+														<dt>Salidas:</dt><dd>{{ salidas|number_format(3, '.', ',') }} Kgs</dd>
+														<dt>Existencias:</dt><dd><strong>{{ total|number_format(3, '.', ',') }}</strong> Kgs</dd>
+													</dl>
+												</div>
+												<div class="span5"><h4 class="no-margin">De los  cuales</h4>
+													<dl class="dl-horizontal">
+
+														<dt>1.1G :</dt><dd>{{ clase11g|number_format(3, '.', ',') }} Kgs </dd>
+														<dt>1.3G :</dt><dd>{{ clase13g|number_format(3, '.', ',') }} Kgs</dd>
+														<dt>1.4G :</dt><dd>{{ clase14g|number_format(3, '.', ',') }} Kgs</dd>
+														<dt>1.4S :</dt><dd>{{ clase14s|number_format(3, '.', ',') }} Kgs</dd>
+													</dl>
+												</div>
+												<div class="row">
+													<a href="{{ path('informe_mensual_print', { 'mes': mes, 'mesn':mesn, 'ano': ano }) }}" target="_blank" name="guardarbobinaimp" id="bobinaimp" class="btn btn-alt btn-primary"><span class="awe-print"></span>Imprimir Parte Mensual</a>
+												</div>
+											</div>
+
+									</article>
+								</div>
+			{% endif %}
+{% endblock %}

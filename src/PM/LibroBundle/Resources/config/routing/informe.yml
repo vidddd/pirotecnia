@@ -1,0 +1,15 @@
+informe_diario:
+    pattern:  /diario
+    defaults: { _controller: "PMLibroBundle:Informe:diario" }
+
+informe_mensual:
+    pattern:  /mensual
+    defaults: { _controller: "PMLibroBundle:Informe:mensual" }
+
+informe_diario_print:
+    pattern:  /diario/print
+    defaults: { _controller: "PMLibroBundle:Informe:printDiario" }
+
+informe_mensual_print:
+    pattern:  /mensual/print/{mes}/{mesn}/{ano}
+    defaults: { _controller: "PMLibroBundle:Informe:printMensual" }

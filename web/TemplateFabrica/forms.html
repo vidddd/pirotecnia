@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Forms | Sangoma Bootstrap Admin Template</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery TagsInput Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/jquery.tagsinput.css'>
+		
+		<!-- jQuery jWYSIWYG Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/jquery.jwysiwyg.css'>
+		
+		<!-- Bootstrap wysihtml5 Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/bootstrap-wysihtml5.css'>
+
+		<!-- Date range picker Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/daterangepicker.css'>
+
+		<!-- Bootstrap Timepicker Styles -->
+		<link rel='stylesheet' type='text/css' href='css/plugins/bootstrap-timepicker.css'>
+
+		<!-- Styles -->
+		<link rel='stylesheet' type='text/css' href='css/sangoma-green.css'>
+		
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-57-precomposed.png">
+		
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.js"><\/script>')</script>
+
+		<script src="js/libs/modernizr.js"></script>
+		<script src="js/libs/selectivizr.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				
+				// Tooltips
+				$('[title]').tooltip({
+					placement: 'top'
+				});
+
+				// Tabs
+				$('.demoTabs a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+
+			});
+		</script>
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+			
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html" class="brand">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+				
+				<!-- User profile -->
+				<div class="user-profile">
+					<figure>
+
+						<!-- User profile avatar -->
+						<img alt="John Pixel avatar" src="http://placekitten.com/60/60">
+
+						<!-- User profile info -->
+						<figcaption>
+							<strong><a href="#" class="">John Pixel</a></strong>
+							<ul>
+								<li><a href="#" title="Message inbox">inbox</a></li>
+								<li><a href="#" title="Account settings">settings</a></li>
+								<li><a href="#" title="Logout">logout</a></li>
+							</ul>
+						</figcaption>
+						<!-- /User profile info -->
+
+					</figure>
+				</div>
+				<!-- /User profile -->
+
+				<!-- Main navigation -->
+				<nav class="main-navigation">
+
+					<!-- Responsive navbar button -->
+					<div class="navbar">
+						<a class="btn btn-alt btn-large btn-primary btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-home"></span> Dashboard</a>
+					</div>
+					<!-- /Responsive navbar button -->
+
+					<!-- Navigation -->
+					<div class="nav-collapse collapse" role="navigation">
+						<ul>
+							<li><a href="index.html"><span class="icon-home"></span> Dashboard</a></li>
+							<li class="active">
+								<a href="forms.html" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-tasks"></span> Forms &amp; Tables<span class="badge">6</span></a>
+								<ul class="dropdown-menu">
+									<li class="active"><a href="forms.html"><span class="icon-align-left"></span>Forms</a></li>
+									<li><a href="tables.html"><span class="icon-th-list"></span>Tables</a><span class="badge">23</span></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-asl"></span> Elements</a>
+								<ul class="dropdown-menu">
+									<li><a href="charts.html"><span class="icon-graph"></span> Charts</a></li>
+									<li><a href="gallery.html"><span class="icon-picture"></span> Gallery</a></li>
+									<li><a href="file-explorer.html"><span class="icon-inbox"></span> File explorer</a></li>
+									<li><a href="calendar.html"><span class="icon-calendar"></span> Calendar</a></li>
+									<li class="divider"></li>
+									<li><a href="ui-buttons.html"><span class="icon-cogs"></span> UI &amp; Buttons</a></li>
+									<li><a href="typo.html"><span class="icon-font"></span> Typography</a><span class="badge">7</span></li>
+									<li><a href="grid.html"><span class="icon-th"></span> Grid</a></li>
+									<li><a href="goodies.html"><span class="icon-heart"></span> Goodies</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-file"></span> Pages</a>
+								<ul class="dropdown-menu">
+									<li><a href="eshop.html">Online store</a></li>
+									<li><a href="add-item.html">Add item / product</a></li>
+									<li><a href="invoice.html">Invoice</a></li>
+									<li><a href="user-profile.html">User profile</a></li>
+									<li><a href="401.html">Error 401</a></li>
+									<li><a href="403.html">Error 403</a></li>
+									<li><a href="404.html">Error 404</a></li>
+									<li><a href="500.html">Error 500</a></li>
+									<li><a href="503.html">Error 503</a></li>
+									<li><a href="login.html">Login page</a></li>
+								</ul>
+							</li>
+							<li><a href="docs/index.html"><span class="icon-info-sign"></span> Docs</a></li>
+						</ul>
+					</div>
+					<!-- /Navigation -->
+
+				</nav>
+				<!-- /Main navigation -->
+
+			</header>
+			<!-- /Main page header -->
+			
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span9 gray data-block">
+						<header>
+							<h2><span class="icon-calendar"></span> Forms</h2>
+							<ul class="data-header-actions">
+								<li class="demoTabs active"><a href="#horizontal" class="btn btn-alt">Horizontal</a></li>
+								<li class="demoTabs"><a href="#vertical" class="btn btn-alt">Vertical</a></li>
+							</ul>
+						</header>
+						<section class="tab-content">
+
+							<!-- Tab #horizontal -->
+							<div class="tab-pane active" id="horizontal">
+
+								<h3>Horizontal form</h3>
+								<form class="form-horizontal no-margin">
+									<fieldset>
+										<div class="control-group">
+											<label class="control-label" for="input">Text input</label>
+											<div class="controls">
+												<input id="input" class="input-xlarge" type="text">
+												<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="optionsCheckbox">Checkbox</label>
+											<div class="controls">
+												<label class="checkbox">
+													<input id="optionsCheckbox" type="checkbox" value="option1">
+													Curabitur vehicula porttitor suscipit
+												</label>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="select">Select list</label>
+											<div class="controls">
+												<select id="select">
+													<option>Pick one</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="textarea">Textarea</label>
+											<div class="controls">
+												<textarea id="textarea" class="input-xxlarge" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="form-actions">
+											<button class="btn btn-alt btn-large btn-primary" type="submit">Save changes</button>
+										</div>
+									</fieldset>
+								</form>
+
+							</div>
+							<!-- /Tab #horizontal -->
+							
+							<!-- Tab #vertical -->
+							<div class="tab-pane" id="vertical">
+
+								<h3>Vertical form</h3>
+								<form class="no-margin">
+									<fieldset>
+										<div class="control-group">
+											<label class="control-label" for="input">Text input</label>
+											<div class="controls">
+												<input id="input" class="input-xlarge" type="text">
+												<p class="help-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="optionsCheckbox">Checkbox</label>
+											<div class="controls">
+												<label class="checkbox">
+													<input id="optionsCheckbox" type="checkbox" value="option1">
+													Curabitur vehicula porttitor suscipit
+												</label>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="select">Select list</label>
+											<div class="controls">
+												<select id="select">
+													<option>Pick one</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="textarea">Textarea</label>
+											<div class="controls">
+												<textarea id="textarea" class="input-xxlarge" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="form-actions">
+											<button class="btn btn-alt btn-large btn-primary" type="submit">Save changes</button>
+										</div>
+									</fieldset>
+								</form>
+
+							</div>
+							<!-- /Tab #vertical -->
+
+						</section>
+						<footer>
+							<p>Morbi vitae luctus dolor. Aliquam ut enim a mi scelerisque porttitor ac at tortor.</p>
+						</footer>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 data-block">
+						<section class="tab-content">
+							<p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+							<p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+							<ul>
+								<li>Add <code>.form-horizontal</code> to the form</li>
+								<li>Wrap labels and controls in <code>.control-group</code></li>
+								<li>Add <code>.control-label</code> to the label</li>
+								<li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+							</ul>
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Styling</h2>
+						</header>
+						<section>
+
+							<form class="form-inline no-margin">
+								<fieldset>
+									<div class="control-group">
+										<label class="control-label" for="inputMask">Input mask</label>
+										<div class="controls">
+											<input type="text" data-mask="999-99-999-9999-9">
+											<p class="help-inline">Only numbers</p>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label">Uneditable input</label>
+										<div class="form-controls">
+											<span class="uneditable-input span4">Uneditable input is text masked as input</span>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="disabledInput">Disabled input</label>
+										<div class="form-controls">
+											<input id="disabledInput" class="disabled" type="text" placeholder="Disabled input" disabled>
+										</div>
+									</div>
+									<div class="control-group warning">
+										<label class="control-label" for="inputWarning">Input with warning</label>
+										<div class="form-controls">
+											<input id="inputWarning" type="text" class="span3">
+											<span class="help-block">This is warning message</span>
+										</div>
+									</div>
+									<div class="control-group error">
+										<label class="control-label" for="inputError">Input with error</label>
+										<div class="form-controls">
+											<input id="inputError" type="text" class="span3">
+											<span class="help-block">This is error message</span>
+										</div>
+									</div>
+									<div class="control-group success">
+										<label class="control-label" for="inputSuccess">Input with success</label>
+										<div class="form-controls">
+											<input id="inputSuccess" type="text" class="span3">
+											<span class="help-block">This is success message</span>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span6 data-block">
+						<header>
+							<h2>Input addons</h2>
+						</header>
+						<section>
+
+							<form class="form-inline no-margin">
+								<fieldset>
+									<div class="control-group">
+										<label class="control-label" for="prependedInput">Prepended add-on</label>
+										<div class="form-controls">
+											<div class="input-prepend">
+												<span class="add-on">password</span><input id="prependedInput" class="span2" type="password">
+											</div>
+											<p class="help-block">This is block input note</p>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="appendedInput">Appended add-on</label>
+										<div class="form-controls">
+											<div class="input-append">
+												<input id="appendedInput" class="span2" type="text"><span class="add-on">&euro;</span>
+											</div>
+											<span class="help-inline">This is inline input note</span>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="appendedPrependedInput">Appended and prepended add-ons</label>
+										<div class="form-controls">
+											<div class="input-prepend input-append">
+												<span class="add-on">192.</span><input id="appendedPrependedInput" class="span2" type="text"><span class="add-on">.255</span>
+											</div>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="form-controls">
+											<div class="input-prepend input-append">
+												<span class="add-on">IPv4:</span><input id="appendedPrependedInput" class="span1" type="text"><span class="add-on">.168.</span><input id="appendedPrependedInput" class="span1" type="text"><span class="add-on">.255</span>
+											</div>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="form-controls">
+											<div class="input-append">
+												<input id="appendedPrependedInput" class="span2" type="text"><button class="btn btn-alt" type="button">Do it now!</button>
+											</div>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="form-controls">
+											<div class="input-prepend input-append">
+												<span class="add-on">I want </span><input id="appendedPrependedInput" class="span1" type="text" placeholder="1 200"><button class="btn btn-alt" type="button">&euro;</button><button class="btn btn-alt" type="button">&pound;</button><button class="btn btn-alt" type="button">$</button><span class="add-on">per month</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- Bootstrap switch -->
+									<div class="control-group">
+										<label class="control-label" for="switch">Toggle button</label>
+										<div class="form-controls">
+
+											<!-- Bootstrap switch checkbox -->
+											<div class="switch" data-on="success" data-off="danger">
+												<input type="checkbox" checked>
+											</div>
+											<!-- /Bootstrap switch checkbox -->
+
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="form-controls">
+
+											<!-- Bootstrap switch checkbox with icons -->
+											<div class="switch" data-on="success" data-on-label="<span class='icon-ok'></span>" data-off-label="<span class='icon-remove'></span>">
+												<input type="checkbox" checked>
+											</div>
+											<!-- /Bootstrap switch checkbox with icons -->
+
+										</div>
+									</div>
+									<!-- /Bootstrap switch -->
+
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span12 gray data-block">
+						<header>
+							<h2>Form element sizing</h2>
+						</header>
+						<section>
+							
+							<form class="form-inline no-margin">
+								<fieldset>
+									<div class="control-group">
+										<label class="control-label">Form elements sizing</label>
+										<div class="form-controls demo">
+											<input class="input-mini" type="text" placeholder=".input-mini">
+											<input class="input-small" type="text" placeholder=".input-small">
+											<input class="input-medium" type="text" placeholder=".input-medium">
+											<input class="span1" type="text" placeholder=".span1">
+											<input class="span2" type="text" placeholder=".span2">
+											<input class="span3" type="text" placeholder=".span3">
+											<input class="span4" type="text" placeholder=".span4">
+											<input class="span5" type="text" placeholder=".span5">
+											<select class="span6">
+												<option>Google</option>
+												<option>PayPal</option>
+												<option>Microsoft</option>
+												<option>Apple</option>
+												<option>Yahoo</option>
+											</select>
+											<select class="span7">
+												<option>Google</option>
+												<option>PayPal</option>
+												<option>Microsoft</option>
+												<option>Apple</option>
+												<option>Yahoo</option>
+											</select>
+											<select class="span8">
+												<option>Google</option>
+												<option>PayPal</option>
+												<option>Microsoft</option>
+												<option>Apple</option>
+												<option>Yahoo</option>
+											</select>
+											<select class="span9">
+												<option>Google</option>
+												<option>PayPal</option>
+												<option>Microsoft</option>
+												<option>Apple</option>
+												<option>Yahoo</option>
+											</select>
+											<select class="span10">
+												<option>Google</option>
+												<option>PayPal</option>
+												<option>Microsoft</option>
+												<option>Apple</option>
+												<option>Yahoo</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span9 data-block">
+						<section>
+							
+							<form class="no-margin">
+								<fieldset>
+									<legend>Textarea with wysihtml5 editor</legend>
+									<div class="control-group">
+										<div class="controls">
+											<textarea id="textarea4" class="wysihtml5" placeholder="Enter text&hellip;" rows="8"></textarea>
+										</div>
+									</div>
+									<div class="form-actions">
+										<button class="btn btn-alt btn-primary btn-large" type="submit">Save</button>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 dark data-block">
+						<header>
+							<h2>Wysihtml5</h2>
+						</header>
+						<section>
+							
+							<p>Bootstrap-wysihtml5 is a javascript plugin that makes it easy to create simple, beautiful wysiwyg editors with the help of <a href="https://github.com/xing/wysihtml5" target="_blank">wysihtml5</a>.</p>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span3 dark data-block">
+						<header>
+							<h2>jQuery jWYSIWYG</h2>
+						</header>
+						<section>
+							
+							<p>This jquery plugin is an inline content editor to allow editing rich HTML content on the fly. With a small file size less than 26Kb total and only 18Kb of code, the main concept is to keep it simple, not all users need font coloring or create tables, just the basic.</p>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+					<!-- Data block -->
+					<article class="span9 data-block">
+						<section>
+							
+							<form class="no-margin">
+								<fieldset>
+									<legend>Textarea with jWYSIWYG editor</legend>
+									<div class="control-group">
+										<div class="controls">
+											<textarea id="textarea3" class="wysiwyg" rows="8"></textarea>
+										</div>
+									</div>
+									<div class="form-actions">
+										<button class="btn btn-alt btn-large" type="submit">Save</button>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span12 gray data-block">
+						<header>
+							<h2>File &amp; Image input</h2>
+						</header>
+						<section>
+							
+							<!-- Bootstrap file upload plugin -->
+							<form class="no-margin">
+								<fieldset>
+
+									<div class="control-group">
+										<label class="control-label" for="fileInput">File input</label>
+										<div class="controls">
+											<div class="fileupload fileupload-new" data-provides="fileupload">
+												<div class="input-append">
+													<div class="uneditable-input">
+														<i class="icon-file fileupload-exists"></i>
+														<span class="fileupload-preview"></span>
+													</div>
+													<span class="btn btn-alt btn-file">
+															<span class="fileupload-new">Select file</span>
+															<span class="fileupload-exists">Change</span>
+															<input type="file" />
+													</span>
+													<a href="#" class="btn btn-alt btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="control-group">
+										<label class="control-label" for="fileInput">Image upload widgets</label>
+										<p>When uploading an image, it's possible to show a thumbnail instead of the filename. Size of thumbnail can be adjusted by adding class <code>fileupload-large</code> or <code>fileupload-small</code>. Use class <code>raw</code> for thumbnail without borders.</p>
+
+										<div class="row-fluid">
+											<div class="span6">
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<h4>Fixed size thumbnail preview</h4>
+													<div class="fileupload-preview fileupload-large thumbnail"></div>
+													<div>
+														<span class="btn btn-alt btn-file">
+															<span class="fileupload-new">Select image</span>
+															<span class="fileupload-exists">Change</span>
+															<input type="file" />
+														</span>
+														<a href="#" class="btn btn-alt btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+													</div>
+												</div>
+
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<div class="fileupload-new fileupload-small thumbnail"><img src="img/sample_content/upload-50x50.png"></div>
+													<div class="fileupload-preview fileupload-exists fileupload-small thumbnail"></div>
+													<span class="btn btn-alt btn-file">
+														<span class="fileupload-new">Select image</span>
+														<span class="fileupload-exists">Change</span>
+														<input type="file">
+													</span>
+													<a href="#" class="btn btn-alt btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+												</div>
+											</div>
+
+											<div class="span6">
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<h4>Flexible thumbnail preview</h4>
+													<div class="fileupload-new fileupload-large thumbnail"><img src="img/sample_content/upload-250x150.png"></div>
+													<div class="fileupload-preview fileupload-exists fileupload-large flexible thumbnail"></div>
+													<div>
+														<span class="btn btn-alt btn-file">
+															<span class="fileupload-new">Select image</span>
+															<span class="fileupload-exists">Change</span>
+															<input type="file">
+														</span>
+														<a class="btn btn-alt btn-danger fileupload-exists" data-dismiss="fileupload" href="#">Remove</a>
+													</div>
+												</div>
+
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<div class="fileupload-new fileupload-small thumbnail"><img src="img/sample_content/upload-50x50.png"></div>
+													<div class="fileupload-preview fileupload-exists fileupload-small flexible raw thumbnail"></div>
+													<span class="btn btn-alt btn-file">
+														<span class="fileupload-new">Select image</span>
+														<span class="fileupload-exists">Change</span>
+														<input type="file">
+													</span>
+													<a href="#" class="btn btn-alt btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</fieldset>
+							</form>
+							<!-- /Bootstrap file upload plugin -->
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span3 red data-block">
+						<header>
+							<h2>Date picker</h2>
+						</header>
+						<section>
+
+							<p>Simple date picker plugin for Bootstrap framework. Check out the <a href="http://www.eyecon.ro/bootstrap-datepicker/" target="_blank">official page</a> for more options and details.</p>
+							<form class="no-margin">
+								<fieldset>
+									<div class="control-group">
+										<div class="controls">
+											<div class="input-append no-margin">
+												<input class="datepicker input-small" value="08/06/2012" type="text"><span class="add-on"><i class="icon-calendar"></i></span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 blue data-block">
+						<header>
+							<h2>Date range picker</h2>
+						</header>
+						<section>
+							
+							<p>A jQuery plugin to choose date ranges from a calendar or a pre-defined list of ranges. Visit <a href="http://www.dangrossman.info/2012/08/20/a-date-range-picker-for-twitter-bootstrap/" target="_blank">official project page</a> for more details.</p>
+							<form class="no-margin">
+								<fieldset>
+									<div class="control-group">
+										<div class="controls">
+											<div class="input-prepend no-margin">
+											  <span class="add-on"><i class="icon-calendar"></i></span><input class="input-medium" type="text" name="demoDaterangePicker" id="demoDaterangePicker" />
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 green data-block">
+						<header>
+							<h2>Timepicker</h2>
+						</header>
+						<section>
+							
+							<p>Easily select a time for a text input using your mouse or keyboards arrow keys. More detailed documentation can be found on <a href="http://jdewit.github.com/bootstrap-timepicker/" target="_blank">project's site</a>.</p>
+							<form class="no-margin">
+								<fieldset>
+									<div class="control-group">
+										<div class="controls">
+											<div class="bootstrap-timepicker">
+												<input id="demoTimepicker" type="text" class="input-small">
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span3 purple data-block">
+						<header>
+							<h2>Color picker</h2>
+						</header>
+						<section>
+							
+							<p>Simply add color picker to field or to any other element. Check out the <a href="http://www.eyecon.ro/bootstrap-colorpicker/" target="_blank">official page</a> for more options.</p>
+							<form class="no-margin">
+								<fieldset>
+									<div class="control-group">
+										<div class="controls">
+											<div class="input-append no-margin" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+												<input type="text" class="colorpicker input-small" value=""><span class="add-on"><i class="colorpicker-preview" style="background-color: rgb(255, 146, 180)"></i></span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Data block -->
+					<article class="span6 orange data-block">
+						<header>
+							<h2>Inline form</h2>
+						</header>
+						<section>
+
+							<p>Add <code>.form-inline</code> for vertical alignment and spacing of form controls.</p>
+							<form class="form-inline no-margin">
+								<div class="control-group">
+									<div class="controls">
+										<input class="input-small" type="text" placeholder="Email">
+										<input class="input-small" type="password" placeholder="Password">
+										<label class="checkbox">
+											<input type="checkbox">
+											Remember me
+										</label>
+										<button class="btn btn-alt" type="submit">Sign in</button>
+									</div>
+								</div>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span6 turquoise data-block">
+						<header>
+							<h2>Search form</h2>
+						</header>
+						<section>
+
+							<p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>input</code>.</p>
+							<form class="form-search no-margin">
+								<div class="control-group">
+									<div class="controls">
+										<input class="search-query" type="text">
+										<button class="btn btn-alt" type="submit">Search</button>
+									</div>
+								</div>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Data block -->
+					<article class="span3 gray data-block">
+						<header>
+							<h2><span class="icon-check"></span> jQuery TagsInput</h2>
+						</header>
+						<section>
+
+							<p>This plugin will turn your boring tag list into a magical input that turns each tag into a style-able object with its own delete link.</p>
+							<form class="no-margin">
+								<fieldset>
+									<div class="control-group">
+										<div class="controls">
+											<input id="inputTag" class="tagsinput" type="text" value="ok,bar">
+										</div>
+									</div>
+								</fieldset>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+
+					<!-- Data block -->
+					<article class="span9 dark data-block">
+						<header>
+							<h2><span class="icon-check"></span> Form validation</h2>
+						</header>
+						<section>
+
+							<form class="form-horizontal no-margin" id="demoValidation" novalidate>
+								<div class="control-group">
+									<label class="control-label" for="email">Email address</label>
+									<div class="controls">
+										<input type="email" name="email" id="email" required>
+										<p class="help-block">Email address we can contact you on</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="emailAgain">Email again</label>
+									<div class="controls">
+										<input type="email" data-validation-matches-match="email" data-validation-matches-message="Must match email address entered above" id="emailAgain" name="emailAgain">
+										<p class="help-block">And again, to check for speeling miskates</p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="terms-and-conditions">Legal</label>
+									<div class="controls">
+										<label class="checkbox">
+											<input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required data-validation-required-message="You must agree to the terms and conditions">
+											I agree to the <a href="#">terms and conditions</a>
+										</label>
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Quality Control</label>
+									<div class="controls">
+										<label class="checkbox">
+											<input type="checkbox" name="qualityControl[]" value="fast" data-validation-minchecked-minchecked="2" data-validation-minchecked-message="Choose two" data-validation-maxchecked-maxchecked="2" data-validation-maxchecked-message="You can't have it all ways" >
+											Fast
+										</label>
+										<label class="checkbox">
+											<input type="checkbox" name="qualityControl[]" value="cheap">
+											Cheap
+										</label>
+										<label class="checkbox">
+											<input type="checkbox" name="qualityControl[]" value="good">
+											Good
+										</label>
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-actions">
+									<button type="submit" class="btn btn-alt btn-primary"><span class="icon-ok"></span>  Test Validation</button>
+								</div>
+							</form>
+
+						</section>
+					</article>
+					<!-- /Data block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+			<!-- Sticky footer push -->
+			<div id="push"></div>
+			
+		</div>
+		<!-- /Full height wrapper -->
+		
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="#" class="">Support</a></li>
+					<li><a href="#" class="">Documentation</a></li>
+					<li><a href="#" class="">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-alt"><span class="icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<!-- Bootstrap scripts -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Fileupload and Inputmask plugin -->
+		<script src="js/plugins/fileupload/bootstrap-fileupload.js"></script>
+		<script src="js/plugins/inputmask/bootstrap-inputmask.js"></script>
+
+		<!-- Button switch -->
+		<script src="js/plugins/bootstrapSwitch/bootstrapSwitch.js"></script>
+
+		<!-- jQuery TagsInput -->
+		<script src="js/plugins/tagsInput/jquery.tagsinput.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+			
+				$('.tagsinput').tagsInput();
+			
+			});
+		</script>
+		
+		<!-- jQuery jWYSIWYG -->
+		<script src="js/plugins/jWYSIWYG/jquery.wysiwyg.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				
+				$('.wysiwyg').wysiwyg({
+					controls: {
+						bold          : { visible : true },
+						italic        : { visible : true },
+						underline     : { visible : true },
+						strikeThrough : { visible : true },
+						
+						justifyLeft   : { visible : true },
+						justifyCenter : { visible : true },
+						justifyRight  : { visible : true },
+						justifyFull   : { visible : true },
+			
+						indent  : { visible : true },
+						outdent : { visible : true },
+			
+						subscript   : { visible : true },
+						superscript : { visible : true },
+						
+						undo : { visible : true },
+						redo : { visible : true },
+						
+						insertOrderedList    : { visible : true },
+						insertUnorderedList  : { visible : true },
+						insertHorizontalRule : { visible : true },
+						
+						cut   : { visible : true },
+						copy  : { visible : true },
+						paste : { visible : true }
+					},
+					events: {
+						click: function(event) {
+							if ($("#click-inform:checked").length > 0) {
+								event.preventDefault();
+								alert("You have clicked jWysiwyg content!");
+							}
+						}
+					}
+				});
+				
+			});
+		</script>
+		
+		<!-- Wysihtml5 -->
+		<script src="js/plugins/wysihtml5/wysihtml5-0.3.0.js"></script>
+		<script src="js/plugins/wysihtml5/bootstrap-wysihtml5.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				// Note, we are adding .btn-alt to toolbar template directly in bootstrap-wysihtml5.js for better readability
+				$('.wysihtml5').wysihtml5();
+				
+			});
+		</script>
+		
+		<!-- Colorpicker -->
+		<script src="js/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				var preview = $('.colorpicker-preview')[0].style;
+				$('.colorpicker').colorpicker().on('changeColor', function(ev){
+					preview.backgroundColor = ev.color.toHex();
+				});
+				
+			});
+		</script>
+		
+		<!-- Datepicker -->
+		<script src="js/plugins/datepicker/bootstrap-datepicker.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				$('.datepicker').datepicker({
+					"autoclose": true
+				});
+
+			});
+		</script>
+
+		<!-- Date range picker -->
+		<script type="text/javascript" src="js/plugins/dateRangePicker/date.js"></script>
+		<script type="text/javascript" src="js/plugins/dateRangePicker/daterangepicker.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$('#demoDaterangePicker').daterangepicker();
+
+			});
+		</script>
+
+		<!-- Timepicker -->
+		<script src="js/plugins/bootstrapTimePicker/bootstrap-timepicker.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				$('#demoTimepicker').timepicker({
+					minuteStep: 5,
+					showInputs: false,
+					disableFocus: true
+				});
+
+			});
+		</script>
+
+		<!-- Form validation -->
+		<script src="js/plugins/bootstrapValidation/jqBootstrapValidation.min.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				$("#demoValidation input").jqBootstrapValidation({
+					submitSuccess: function($form, event) {
+						event.preventDefault();
+					}
+				});
+
+			});
+		</script>
+		
+	</body>
+</html>

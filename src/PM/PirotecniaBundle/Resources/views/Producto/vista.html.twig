@@ -1,0 +1,36 @@
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3>Detalle Producto</h3><hr /></div>
+						<div class="modal-body form-horizontal">
+							<fieldset>
+							 <div class="control-group">
+									<label class="control-label">Nombre</label>
+									<div class="controls">
+									<input type="text" id="almacen_producto" class="span3" maxlength="255" value="{{ entity.nombre }}">
+									</div>
+								</div>
+								 <div class="control-group">
+									<label class="control-label">Número de Catalogación</label>
+									<div class="controls">
+									<input type="text" id="almacen_producto" class="span2" maxlength="255" value="{{ entity.numero }}">
+									</div>
+								</div>
+							<div class="control-group">
+									<label class="control-label">Division de Riesgo</label>
+									<div class="controls">
+									<input type="text" id="almacen_producto" class="input-small" maxlength="255" value="{{ entity.riesgoText }}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Peso</label>
+									<div class="controls">
+									<input type="text" id="almacen_producto" class="input-small" maxlength="255" value="{{ entity.peso }}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">Desabilitado ?</label>
+									<div class="controls">{{  entity.disabled ? 'Si' : 'No' }}
+									</div>
+								</div>
+							</fieldset>	<div class="clearfix"></div>
+							</div>
+								<div class="modal-footer"><a href="#" class="btn btn-alt" style="float:left;" data-dismiss="modal">Cerrar</a>
+								</div>

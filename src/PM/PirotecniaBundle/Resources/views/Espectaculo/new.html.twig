@@ -1,0 +1,56 @@
+{% extends 'PMInicioBundle::layout.html.twig' %}
+{% block title "Espectaculos" %}
+{% block content %}
+<section class="container">
+	<div class="row">
+		<article class="span12 red data-block"><header><h2>Nuevo Espect&aacute;culo</h2></header>
+			<section><form action="{{ path('espectaculo_create') }}" method="post" {{ form_enctype(form) }}>
+				<div class="span10">
+					    {% include 'PMPirotecniaBundle:Espectaculo:form.html.twig' with { 'form' : form } %} 
+				</div>
+				<div class="span10" style="display:block;">   
+					<div class="row"><div class="form-actions form-left" style="float:left; width:300px;">
+							<a href="{{ path('espectaculo') }}" class="btn btn-alt" style="float:left;">Cancelar</a>
+						</div>
+						<div class="form-actions form-right" style="float:right;">
+							<button style="float:right;" type="submit" name="guardar" value="1" class="btn btn-alt btn-primary"><span class="awe-save"></span> Guardar</button> 
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+					<table class="table table-striped table-bordered table-hover table-media">
+								<thead>
+									<tr>									
+						                <th>Numero</th>
+						                <th>Peso</th>
+						                <th width="150">Operaciones</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+						        {% for caja in espectaculo.cajas %}
+						            <tr>
+						                <td><a href="" data-toggle="modal">{{ caja.id }}</a></td>
+						                <td>{{ caja.peso }}</td>
+						                <td>
+						            		<div class="btn-group">
+											</div>
+						                </td>
+						            </tr>
+						        {% endfor %}
+						        </tbody>
+						  		</table>
+						</section>
+					</article>
+					<!-- /Data block -->
+
+				</div>
+			</section>
+		</article>
+	</div>
+	 <div style="display:block;">{{  form_errors(form) }} </div>
+							{{  form_widget(form._token) }}
+					</form>
+</section>
+
+{% endblock %}
